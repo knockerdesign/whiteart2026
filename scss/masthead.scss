@@ -1,0 +1,73 @@
+@use "vars.scss" as var;
+
+@use "sass:color";
+
+.masthead-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mastheadText {
+    margin: 2rem 0 0 0;
+
+    @media (min-width: #{var.$bp-sm}) {
+        margin: 4.2rem 0 0 0;
+    }
+
+    @media (min-width: #{var.$bp-md}) {
+        margin: 5.5rem 0 0 0;
+    }
+
+    @media (min-width: #{var.$bp-xl}) {
+        margin: 7.2rem 0 0 0;
+    }
+
+    @media (min-width: #{var.$bp-xxl}) {
+        margin: 10rem 0 0 0;
+    }
+}
+
+.masthead-line2 {
+    font-size: 2.5rem;
+    color: var.$grey6;
+    margin: var.$unit-xxs 0 var.$unit-md;
+    border-top: 1px solid #c1c1c1;
+    padding: var.$unit-xs;
+    text-transform: uppercase;
+
+    @media (min-width: 600px) {
+        font-size: 3.8rem;
+        margin: var.$unit-xxs 0 var.$unit-lg;
+        padding: var.$unit-sm;
+        color: var.$grey5;
+    }
+}
+
+.fasma-text,
+.fasma-text a {
+    font-weight: 300;
+    font-size: 1.6rem;
+
+    @media (min-width: 600px) {
+        font-size: 1.8rem;
+    }
+}
+
+.fasma-text {
+    text-align: center;
+    margin: var.$unit-lg 0 var.$unit-xl 0;
+
+    @media (min-width: 600px) {
+        color: var.$grey6;
+    }
+}
+
+.fasma-text a {
+    color: var.$link;
+
+    &:hover {
+        color: var.$link-hover;
+
+    }
+}

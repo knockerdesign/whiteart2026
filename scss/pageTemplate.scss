@@ -1,0 +1,77 @@
+@use "vars.scss" as var;
+
+body {
+    background-color: var.$pageBgColor;
+    padding-top: 30px;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-top: 0;
+    }
+}
+
+.whiteArtPage {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &:after,
+    &:before {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    @media (min-width: 768px) {
+        width: 750px;
+    }
+
+    @media (min-width: 992px) {
+        width: 970px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 1170px;
+    }
+
+    @media (min-width: 1600px) {
+        width: 1570px;
+    }
+}
+
+.container-sketches {
+    margin: 0 var.$unit-lg;
+
+    @media (min-width: 768px) {
+        width: 750px;
+        margin: 0 auto;
+    }
+
+    @media (min-width: 1200px) {
+        width: 1100px;
+    }
+
+    @media (min-width: 1500px) {
+        width: 1400px;
+    }
+
+    @media (min-width: 1700px) {
+        width: 1600px;
+    }
+
+    @media (min-width: 2000px) {
+        width: 1900px;
+    }
+}

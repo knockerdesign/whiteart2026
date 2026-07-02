@@ -1,0 +1,168 @@
+@use "vars.scss" as var;
+
+
+h2,
+h3,
+p {
+    orphans: 3;
+    widows: 3;
+}
+
+h2,
+h3 {
+    page-break-after: avoid;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    color: var.$body-text-col;
+}
+
+
+h1 {
+    font-weight: 300;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 3rem;
+    margin: 0 0 30px 0;
+}
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 5rem;
+        line-height: 4rem;
+        margin: 20px 0 40px 0;
+    }
+}
+
+
+
+
+h2 {
+    font-size: 2.5rem;
+    margin: 8px 0 20px;
+}
+
+@media screen and (min-width: 992px) {
+    h2 {
+        font-size: 3.5rem;
+        margin: 15px 0 30px;
+    }
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+    h3.title-indent {
+        text-indent: -12px;
+    }
+
+    h3.title-indent span {
+        color: #888;
+        vertical-align: top;
+        margin: 0 3px;
+        display: inline;
+    }
+}
+
+a,
+li,
+p {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.intro {
+    font-size: 2rem;
+    color: var.$grey6;
+}
+
+h2.standardHeading {
+    font-weight: 300;
+    margin: 2rem 0 1rem 0;
+    color: rgba(var.$darkGrey, 0.72);
+
+    @media (min-width: 600px) {
+        margin: 4rem 0 2rem 0;
+    }
+}
+
+
+a {
+    background: 0 0;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+a {
+    color: var.$link;
+}
+
+a:focus,
+a:hover {
+    color: var.$link-hover;
+}
+
+a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+
+.remove-bottom-margin {
+    margin-bottom: 0;
+}
+
+.art-panel {
+
+    span.forSale,
+    a.forSaleLink,
+    .buyPrints-link,
+    .buyPrints-link:active,
+    .buyPrints-link:visited {
+        display: inline-block;
+        text-decoration: none;
+        padding: 8px 12px;
+        border: 1px solid var.$forSale;
+        color: var.$forSale;
+        margin: var.$unit-sm 0 0 var.$unit-md;
+        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(11, 212, 11, 0.5);
+            color: var.$forSale;
+        }
+    }
+}
+
+.buyPrints-link {
+    border-left: none;
+}
+
+// sold circle
+span.sold {
+    display: inline-block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: var.$sold;
+    margin-right: var.$unit-sm;
+    vertical-align: text-bottom;
+}

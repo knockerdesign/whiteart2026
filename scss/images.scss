@@ -1,0 +1,145 @@
+@use "vars.scss" as var;
+
+
+img {
+    width: 96%;
+    height: auto;
+    margin: 0 2%;
+    background-image: url(images/paint-loader-art.gif);
+    background-repeat: no-repeat;
+    display: block;
+    transition: max-height 0.5s ease-in-out, width 0.5s ease-in-out,
+        border-left-width 0.5s ease-in-out, border-right-width 0.5s ease-in-out,
+        border-top-width 0.5s ease-in-out, border-bottom-width 0.5s ease-in-out;
+
+    border-color: var.$lightGrey;
+    border-style: solid;
+    border-top-width: 9px;
+    border-right-width: 9px;
+    border-bottom-width: 11px;
+    border-left-width: 9px;
+    filter: drop-shadow(3px 5px 10px var.$darkGrey);
+
+    &.large {
+        border-top-width: 19px;
+        border-right-width: 19px;
+        border-bottom-width: 25px;
+        border-left-width: 19px;
+    }
+}
+
+.sketch-section {
+    img {
+        margin-bottom: 0;
+        border-color: var.$lightGrey;
+        border-style: solid;
+        border-top-width: 3px;
+        border-right-width: 3px;
+        border-bottom-width: 3px;
+        border-left-width: 3px;
+        filter: drop-shadow(1px 3px 5px var.$darkGrey);
+    }
+}
+
+.no-border-img {
+    border: 0px !important;
+    filter: drop-shadow(0 0 0);
+}
+
+.art-panel,
+.illust-panel {
+    img:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+img:hover {
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
+}
+
+img.large:hover {
+    cursor: default;
+}
+
+img.large+aside {
+    margin-right: 15px;
+
+    @media all and (min-width: 530px) {
+        margin-right: 0;
+    }
+}
+
+img.portrait-img {
+    max-height: 350px;
+    height: auto;
+}
+
+@media all and (min-width: 530px) {
+    img {
+        min-height: 80px;
+        min-width: 120px;
+        background-size: 6%;
+        background-position: center;
+        width: 490px;
+        margin: 0 auto;
+    }
+
+    img.large {
+        width: 100%;
+    }
+}
+
+img.large.portrait-img {
+    width: auto;
+    max-height: 800px;
+    max-width: calc(100vw - 20px);
+    margin: 0 auto;
+}
+
+img.no-enlarge:hover {
+    cursor: auto;
+}
+
+a img.staticBanner {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.darrell-mug-shot {
+    margin-top: 90px;
+}
+
+
+aside {
+    text-align: right;
+    float: right;
+    margin-right: 4%;
+    transition: margin-right 1s ease-in-out;
+}
+
+@media all and (min-width: 768px) {
+    aside {
+        margin-right: 17%;
+    }
+}
+
+@media all and (min-width: 992px) {
+    aside {
+        margin-right: 24.5%;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    aside {
+        margin-right: 29%;
+    }
+}
+
+aside.sketches {
+    text-align: center;
+    padding-bottom: var.$unit-md;
+    float: none;
+    margin-right: auto;
+}

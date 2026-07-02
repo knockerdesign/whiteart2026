@@ -1,0 +1,67 @@
+$base-unit: 0.5rem; // changes base unit to 8px
+
+$unit-xxs: $base-unit; // 4px
+$unit-xs: $base-unit * 1.5; // 8px
+$unit-sm: $base-unit * 2; // 12px
+$unit-md: $base-unit * 4; // 24px
+$unit-lg: $base-unit * 8; // 32px
+$unit-xl: $base-unit * 12; // 48px
+$unit-xxl: $base-unit * 16; // 80px
+
+// colours
+
+$black: #000;
+$body-text-col: #222;
+$darkGrey: #393e40;
+$grey6: #7b8589;
+$grey5: #acb9bf;
+$blueGrey: #cfdee6;
+$lightGrey: #eee;
+$white: #fff;
+
+$pageBgColor: #f0eeeb;
+$navActive: rgb(25, 187, 251);
+$navHover: $blueGrey;
+$navActiveBg: rgb(10, 90, 122);
+
+$panelGradient-start: $grey5;
+$panelGradient-end: rgb(226, 234, 238);
+
+$forSale: #022802;
+$sold: #ff0000;
+
+$link: #428bca;
+$link-hover: #2a6496;
+
+
+// page dimensions
+
+$footerHeight: 150px;
+
+$emailContactBg: #01ae23;
+$emailContactBg-hover: #017318;
+$emailPanelBgGradient1: $emailContactBg;
+$emailPanelBgGradient2: #62c43f;
+$emailPanelBgGradient3: #02B59A;
+$emailContactText: #fff;
+$emailContactText-hover: #fff;
+$emailBtnText: #fff;
+$emailBtnBg: #005812;
+$emailBtnText-hover: #fff;
+
+$button: $emailContactBg;
+$button-hover: $emailContactBg-hover;
+$button-down: $emailContactBg-hover;
+
+// Breakpoints
+
+$bp-xs: 500px;
+$bp-sm: 768px;
+$bp-rg: 1024px;
+$bp-md: 1200px;
+$bp-lg: 1400px;
+$bp-xl: 1700px;
+$bp-xxl: 2200px;
+
+$breakpoint-nav: 900px;
+$nav-transition-time: 0.5s;

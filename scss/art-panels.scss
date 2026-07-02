@@ -1,0 +1,84 @@
+@use "vars.scss" as var;
+
+@use "sass:color";
+
+.art-panel,
+.article-panel,
+.illust-panel {
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+}
+
+.art-panel p,
+.illust-panel p {
+    margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+
+    .art-panel p,
+    .illust-panel p {
+        margin: 20px 0;
+    }
+}
+
+.art-panel a,
+.illust-panel a {
+    color: #aaa;
+}
+
+.art-panel a:hover,
+.illust-panel a:hover {
+    color: #f8f8f8;
+}
+
+.art-panel,
+.illust-panel {
+    background-color: var.$grey5;
+
+    color: var.$body-text-col;
+
+    h2 {
+        font-weight: 300;
+        color: var.$darkGrey;
+    }
+
+    h3 {
+        color: var.$darkGrey;
+    }
+
+    background: linear-gradient(180deg,
+        var.$panelGradient-start 50%,
+        var.$panelGradient-end 100%);
+
+    @media (min-width: 1400px) {
+        background: linear-gradient(90deg, var.$pageBgColor 3%, transparent 20%, transparent 80%, var.$pageBgColor 97%),
+            linear-gradient(180deg,
+                var.$panelGradient-start 50%,
+                var.$panelGradient-end 100%)
+    }
+
+    @media (min-width: 2400px) {
+        background: linear-gradient(90deg, var.$pageBgColor 10%, transparent 30%, transparent 70%, var.$pageBgColor 90%),
+            linear-gradient(180deg,
+                var.$panelGradient-start 50%,
+                var.$panelGradient-end 100%)
+    }
+}
+
+
+.section-divide {
+    margin: 50px 0 80px 20%;
+    // height: 3px;
+    // background: rgb(226, 243, 247);
+    // background: linear-gradient(
+    //   90deg,
+    //   rgba(226, 243, 247, 0) 2%,
+    //   rgba(89, 102, 106, 1) 50%,
+    //   rgba(226, 243, 247, 0) 98%
+    // );
+    clear: both;
+    width: 60%;
+    position: relative;
+}

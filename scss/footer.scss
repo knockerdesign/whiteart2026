@@ -1,0 +1,9 @@
+@use "vars.scss" as var;
+@use "sass:color";
+
+
+footer {
+    margin-top: 50px;
+    height: var.$footerHeight;
+    background: #e2e2e2;
+}

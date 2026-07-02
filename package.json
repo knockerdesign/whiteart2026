@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "sass": "sass --watch scss/base.scss:styles.css",
+    "serve": "browser-sync start --server --files 'styles.css, *.html, js/*.js'",
+    "dev": "concurrently \"npm run sass\" \"npm run serve\"",
+    "clean": "npx js-beautify --type html -r \"**/*.html\" && npx js-beautify --type css -r \"**/*.scss\""
+  },
+  "dependencies": {
+    "sass": "^1.87.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3",
+    "concurrently": "^9.1.2",
+    "prettier": "^3.5.3"
+  }
+}

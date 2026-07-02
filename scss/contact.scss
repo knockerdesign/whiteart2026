@@ -1,0 +1,306 @@
+@use "vars.scss" as var;
+
+@use "sass:color";
+
+.contact {
+    width: 67%; // the contact button is larger than the FB button, because who cares about facebook
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 800;
+    text-align: center;
+
+    @media (min-width: 600px) {
+        top: 120px;
+        bottom: auto;
+        width: 60px;
+
+        span {
+            display: none;
+        }
+    }
+}
+
+
+.contactPanelBtn {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: var.$emailContactBg;
+    font-size: 3rem;
+    color: var.$emailContactText;
+    text-align: center;
+    padding-top: 9px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+
+    @media (min-width: 600px) {
+        left: 0;
+        width: 60px;
+        height: 60px;
+        border-radius: 9px 0 0 9px;
+    }
+}
+
+.contactPanelBtn:hover {
+    cursor: pointer;
+    background-color: var.$emailContactBg-hover;
+    color: var.$emailContactText-hover;
+}
+
+
+
+
+.contact-email {
+    .contactPanelBtn {
+        @media (min-width: 600px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 0;
+            margin-top: 16px;
+        }
+    }
+}
+
+
+.contact-facebook {
+    bottom: 0;
+    left: 0;
+    width: 33%;
+
+    @media (min-width: 600px) {
+        top: 60px;
+        bottom: auto;
+        left: auto;
+        right: 0;
+        width: 60px;
+    }
+}
+
+
+.contact-facebook .contactPanelBtn {
+    transition: background-color 0.5s ease, color 0.5s ease;
+    font-size: 34px;
+    color: #fff;
+    background-color: #3f7dce;
+
+    @media (min-width: 600px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+    }
+}
+
+.contact-facebook .contactPanelBtn:hover {
+    background-color: #1d4c8a;
+}
+
+
+
+
+.contact .emailLink,
+.contact p {
+    margin: 0;
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+.contact p {
+    padding: 10px;
+}
+
+.contact .emailLink {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: var.$emailBtnBg;
+    color: var.$emailBtnText;
+    width: 75%;
+    margin: 10px auto;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.contact .emailLink:hover {
+    color: var.$emailBtnText-hover;
+    background-color: rgba(var.$emailBtnBg, .5);
+}
+
+
+// ----------------------------------------------------------------------------------------------------------------
+// CONTACT FORM 
+// ----------------------------------------------------------------------------------------------------------------
+
+
+
+.contact-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    z-index: 901;
+    background: #fff;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -12px 48px rgba(0, 0, 0, 0.22), 0 -2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem 2rem 2.5rem;
+    max-width: 660px;
+    margin: 0 auto;
+    transform: translateY(110%);
+    transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+
+    @media (min-width: #{var.$bp-sm}) {
+        right: 40px;
+        left: inherit;
+    }
+
+    @media (min-width: #{var.$bp-md}) {
+        min-width: 500px;
+    }
+
+    @media (min-width: #{var.$bp-lg}) {
+        min-width: 600px;
+    }
+}
+
+.contact-sheet.open {
+    transform: translateY(0);
+}
+
+/* drag handle */
+.sheet-handle {
+    width: 40px;
+    height: 4px;
+    background: #ddd;
+    border-radius: 2px;
+    margin: 0 auto 1.5rem;
+}
+
+/* close button */
+.sheet-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    font-size: 2rem;
+    line-height: 1;
+    padding: 0.25rem;
+    transition: color 0.2s;
+}
+
+.sheet-close:hover {
+    color: #1a1a1a;
+}
+
+/* ── Form styles ── */
+.contact-sheet h2 {
+    margin-bottom: 0.3rem;
+    font-size: 3.5rem;
+    text-align: left;
+    color: var.$grey6;
+}
+
+.contact-text {
+    margin: var.$unit-sm 0 var.$unit-md 0;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    font-family: inherit;
+    color: #1a1a1a;
+    background: #fafafa;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #888;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+    background: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.form-group.invalid input,
+.form-group.invalid textarea {
+    border-color: #e53e3e;
+}
+
+.form-group .error-msg {
+    font-size: 1.6rem;
+    color: #e53e3e;
+    margin-top: 0.3rem;
+    display: none;
+}
+
+.form-group.invalid .error-msg {
+    display: block;
+}
+
+.sheet-submit {
+    width: 100%;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    padding: 2rem 1.6rem;
+    background: var.$button;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 0.4rem;
+    transition: background 0.2s, transform 0.1s;
+    font-family: inherit;
+}
+
+.sheet-submit:hover {
+    background: var.$button-hover
+}
+
+.sheet-submit:active {
+    transform: scale(0.98);
+}
+
+.sheet-submit:disabled {
+    background: #a5b4fc;
+    cursor: not-allowed;
+}
+
+.sheet-success {
+    display: none;
+    background: #ecfdf5;
+    border: 1.5px solid #6ee7b7;
+    color: #065f46;
+    text-align: center;
+}
+
+.sheet-success.visible {
+    display: block;
+}
+
+/* ── Trigger button ── */

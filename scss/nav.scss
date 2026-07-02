@@ -1,0 +1,75 @@
+@use "vars.scss" as var;
+
+@use "sass:color";
+
+$nav-number: 3;
+
+.mainNav,
+.mainNavFixed {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: var.$unit-lg;
+
+    @media (min-width: #{var.$bp-md}) {
+        margin-bottom: var.$unit-xl;
+    }
+
+    @media (min-width: #{var.$bp-xl}) {
+        margin-bottom: var.$unit-xxl;
+    }
+
+
+    a {
+        // display: block;
+        padding: var.$unit-sm;
+        text-decoration: none;
+        color: var.$darkGrey;
+        border-top: 1px solid var.$grey5;
+        border-bottom: 1px solid var.$grey5;
+        width: calc(100% / 3);
+        text-align: center;
+        position: relative;
+
+        &:hover {
+            background-color: rgba(var.$navHover, 1);
+            // color: var.$white;
+        }
+
+        &.linkOn {
+            background-color: rgba(var.$navActiveBg, 1);
+            color: var.$white;
+            font-weight: 400;
+
+            &::after {
+                display: block;
+                position: absolute;
+                content: "";
+                left: 0;
+                right: 0;
+                bottom: -3px;
+                height: 3px;
+                background-color: var.$navActive;
+            }
+        }
+    }
+}
+
+.mainNavFixed {
+    position: fixed;
+    opacity: 0;
+    top: -50;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(var.$black, 0.2), 0 4px 12px rgba(var.$black, 0.2);
+    z-index: 200;
+    transition: top 300ms ease-in-out, opacity 300ms ease-in-out;
+
+    &.fixedNav {
+        opacity: 1;
+        top: 0;
+        transition: top 300ms ease-in-out, opacity 300ms ease-in-out;
+    }
+}
