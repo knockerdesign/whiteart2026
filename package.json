@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "sass": "sass --watch scss/base.scss:styles.css",
+    "sass": "sass --watch scss/main.scss:styles.css",
     "serve": "browser-sync start --server --files 'styles.css, *.html, js/*.js'",
     "dev": "concurrently \"npm run sass\" \"npm run serve\"",
+    "dev:ai": "concurrently \"npm run sass:ai:watch\" \"npm run serve:ai\"",
     "clean": "npx js-beautify --type html -r \"**/*.html\" && npx js-beautify --type css -r \"**/*.scss\""
   },
   "dependencies": {

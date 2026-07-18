@@ -1,0 +1,10 @@
+@use "vars.scss" as var;
+
+
+.site-footer {
+    background: var.$hero-bg;
+    color: rgba(var.$white, 0.6);
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 20px 0;
+}

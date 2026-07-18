@@ -1,0 +1,76 @@
+@use "vars.scss" as var;
+
+// ── Top-level flow: order changes at the tablet breakpoint ──
+.index-site-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "heroTxt"
+        "heroImage"
+        "galleries"
+        "introTxt"
+        "about"
+        "siteFooter";
+
+    .hero {
+        grid-area: heroTxt;
+    }
+
+    .intro-text {
+        grid-area: introTxt;
+        position: relative; //for absolute positioned image caption
+    }
+
+    .hero-image {
+        grid-area: heroImage;
+    }
+
+    .galleries {
+        grid-area: galleries;
+    }
+
+    .about {
+        grid-area: about;
+    }
+
+    .site-footer {
+        grid-area: siteFooter;
+    }
+
+    @media (min-width: var.$bp-desktop) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "heroTxt heroImage"
+            "introTxt heroImage"
+            "galleries galleries"
+            "about about"
+            "siteFooter siteFooter";
+    }
+
+    @media (min-width: var.$bp-xxl) {
+        grid-template-columns: 3fr 4fr;
+    }
+
+}
+
+.intro-text {
+    padding: var.$unit-lg var.$page-pad-md;
+
+    @media (min-width: var.$bp-desktop) {
+        padding: var.$unit-lg var.$page-pad-md var.$unit-xl var.$page-pad-md;
+
+    }
+}
+
+.hero-image {
+    grid-area: heroImage;
+}
+
+.galleries {
+    grid-area: galleries;
+}
+
+.about {
+    grid-area: about;
+}

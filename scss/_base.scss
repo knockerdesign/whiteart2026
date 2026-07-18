@@ -1,0 +1,58 @@
+@use "vars.scss" as var;
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var.$body-font;
+    font-weight: 300;
+    color: var.$about-text;
+    font-size: 16px;
+    line-height: 1.6rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    margin: 0 0 0.4em;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+.container {
+    // max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}

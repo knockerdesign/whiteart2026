@@ -1,0 +1,143 @@
+@use "vars.scss" as var;
+
+
+.contact-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 300;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+
+    &.is-open {
+        opacity: 1;
+        pointer-events: auto;
+
+        .contact-modal {
+            transform: translateY(0);
+        }
+    }
+}
+
+.contact-modal {
+    background: var.$white;
+    width: 100%;
+    max-width: 420px;
+    padding: 36px 32px 32px;
+    position: relative;
+    transform: translateY(16px);
+    transition: transform 0.25s ease;
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 4px;
+    }
+}
+
+.modal-subtitle {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: #666;
+    cursor: pointer;
+    padding: 8px;
+
+    &:hover {
+        color: #222;
+    }
+}
+
+.form-group {
+    margin-bottom: 18px;
+
+    label {
+        display: block;
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+        color: #444;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        border: 1px solid #ccc;
+        padding: 10px 12px;
+        font-family: var.$body-font;
+        font-size: 0.95rem;
+
+        &:focus {
+            outline: none;
+            border-color: var.$accent-green;
+        }
+    }
+
+    textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    .error-msg {
+        display: none;
+        color: #c0392b;
+        font-size: 0.8rem;
+        margin-top: 4px;
+    }
+
+    &.invalid {
+
+        input,
+        textarea {
+            border-color: #c0392b;
+        }
+
+        .error-msg {
+            display: block;
+        }
+    }
+}
+
+.modal-submit {
+    width: 100%;
+    background: var.$accent-green;
+    color: var.$white;
+    border: none;
+    padding: 12px;
+    font-family: var.$body-font;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: var.$accent-green-hover;
+    }
+
+    &:disabled {
+        opacity: 0.7;
+        cursor: default;
+    }
+}
+
+.modal-success {
+    display: none;
+    text-align: center;
+    padding: 12px 0 4px;
+    font-size: 0.95rem;
+
+    &.visible {
+        display: block;
+    }
+}

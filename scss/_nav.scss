@@ -1,0 +1,163 @@
+@use "vars.scss" as var;
+
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var.$nav-bg;
+}
+
+.nav-inner {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+    @media (min-width: var.$bp-tablet) {
+
+        border-top: 1px solid var.$col-grey-50;
+        border-bottom: 1px solid var.$col-grey-50;
+    }
+}
+
+.nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    background: none;
+    border: none;
+    color: var.$nav-text;
+    font-size: var.$nav-txt-size-mob;
+    cursor: pointer;
+    order: 1;
+
+    @media (min-width: var.$bp-tablet) {
+        display: none;
+    }
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    order: 3;
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    &.is-open {
+        max-height: 400px;
+    }
+
+    @media (min-width: var.$bp-tablet) {
+        flex-direction: row;
+        max-height: none;
+        overflow: visible;
+        order: 2;
+        flex: 1;
+        justify-content: space-around;
+    }
+
+    li {
+        min-width: 0;
+        flex: 1;
+
+        a {
+            display: block;
+            padding: var.$unit-rg var.$unit-rg;
+            color: var.$nav-text;
+            font-size: var.$nav-txt-size;
+            font-weight: var.$nav-txt-weight;
+            letter-spacing: var.$nav-txt-spacing;
+            text-align: center;
+            transition: background 0.2s ease, color 0.2s ease;
+
+            &:hover {
+                background: var.$col-grey-55;
+            }
+
+            @media (min-width: var.$bp-tablet) {
+                padding: var.$unit-sm var.$unit-rg;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    li.is-active a {
+        background: var.$nav-active-bg;
+        color: var.$nav-active-text;
+        position: relative;
+
+        &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            background-color: var.$col-azure;
+            height: 3px;
+        }
+    }
+}
+
+.nav-utility {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 0;
+    order: 2;
+
+    @media (min-width: var.$bp-tablet) {
+        order: 3;
+        padding: 0;
+    }
+}
+
+.btn-contact {
+    background: var.$accent-green;
+    color: var.$white;
+    border: none;
+    padding: 0 32px;
+    font-family: var.$body-font;
+    font-size: var.$nav-txt-size;
+    font-weight: var.$nav-txt-weight;
+    letter-spacing: 0.02em;
+    height: 100%;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: var.$accent-green-hover;
+    }
+}
+
+.btn-facebook {
+    color: var.$white;
+    background-color: var.$fb-blue;
+    font-size: 1.5rem;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 54px;
+    height: 100%;
+
+    svg {
+        width: 34px;
+        fill: var.$white;
+    }
+}
+
+.nav-my-name {
+    display: none;
+
+    @media (min-width: var.$bp-xl) {
+        display: inline;
+    }
+}

@@ -1,0 +1,102 @@
+@use "sass:math";
+@use "vars.scss" as var;
+
+
+.hero {
+    background: var.$hero-bg;
+    padding-bottom: var.$unit-lg;
+    padding-top: var.$unit-lg;
+    padding-left: var.$page-pad-sm;
+    color: var.$white;
+
+    @media (min-width: var.$index-hero-shift) {
+        padding-bottom: var.$unit-rg;
+        padding-left: var.$page-pad-md;
+
+    }
+}
+
+.hero-copy {
+    // display: inline-block; // inline block so the container constrains to the size of the text, thus the border is an underline
+    // h1 {
+    //     font-size: clamp(3.5rem, 3.0385rem + 1.9692vw, 5.5rem);
+    //     font-weight: 300;
+    //     margin-bottom: 6px;
+    //     text-align: left;
+    //     letter-spacing: 0.1rem;
+
+    //     @media (min-width: var.$index-hero-shift) {
+    //         margin-bottom: var.$unit-sm;
+    //     }
+    // }
+    
+    @media (min-width: var.$bp-xl) {
+        max-width: 800px;
+        margin: var.$unit-lg 0;
+    }
+}
+
+// .hero-subtitle {
+//     font-size: clamp(1.53rem, 1.3108rem + 0.9354vw, 2.48rem);
+//     text-transform: uppercase;
+//     letter-spacing: 0.17rem;
+//     color: var.$col-grey-blue;
+//     border-top: 1px solid var.$col-grey-blue;
+//     margin-bottom: 0;
+//     padding-top: var.$unit-xs;
+//     padding-left: 2px; // visual tweak to align text with Darrell White heading
+
+//     @media (min-width: var.$index-hero-shift) {
+//         letter-spacing: 0.17rem;
+//         margin-bottom: var.$unit-md;
+//         padding-top: var.$unit-xs;
+//         padding-left: var.$unit-xs; // visual tweak to align text
+//     }
+
+//     @media (min-width: var.$bp-xl) {
+//         padding-top: var.$unit-sm;
+//     }
+// }
+
+.hero-image {
+    display: none;
+
+    @media (min-width: var.$index-hero-shift) {
+        display: block;
+        background: url(images/close-ups/sydney-awd-close-up.jpg) center center no-repeat;
+        background-size: cover;
+    }
+}
+
+.intro-text {
+    background: var.$hero-bg;
+    color: rgba(var.$white, 0.92);
+
+    p {
+        max-width: 820px;
+    }
+}
+
+#hero-image-caption {
+    display: none; // hide when no hero image is shown
+
+    @media (min-width: var.$index-hero-shift) {
+        display: block;
+        position: absolute;
+        bottom: 24px;
+        right: 48px;
+        margin: 0;
+
+        a {
+            color: var.$nav-text;
+            font-size: var.$font-size-base;
+            font-style: italic;
+            letter-spacing: 0.08rem;
+            text-decoration: underline;
+
+            &:hover {
+                color: var.$white;
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+// ── Palette ──────────────────────────────────────────────
+
+
+$col-grey-10: #e0e0e0;
+$col-grey-50: #7B8589;
+$col-grey-55: #757575;
+$col-grey-blue: #ACB9BF;
+$grey6: #7b8589;
+$darkGrey: #393e40;
+$col-grey-90: #222;
+
+$col-azure: #19BBFB;
+
+$hero-bg: $col-grey-90;
+$nav-bg: $col-grey-90;
+$nav-text: $col-grey-10;
+$nav-hover: #d8d2c8;
+$nav-active-bg: #0090C9;
+$nav-active-text: #ffffff;
+
+$body-text-col: #222;
+
+
+$forSale: #022802;
+$sold: #ff0000;
+
+$link: #428bca;
+$link-hover: #2a6496;
+
+$galleries-bg: #ACB9BF;
+$gallery-label: #2c3236;
+$gallery-card-1: #A4B2B8;
+$gallery-card-2: #9CAAB1;
+$gallery-card-3: #92A2A9;
+$gallery-card-4: #8A9BA2;
+
+$about-bg: #f5f4f1;
+$about-text: #2a2a2a;
+
+$accent-green: #01ae23;
+$accent-green-hover: #019a1f;
+$fb-blue: #1877f2;
+
+$white: #fff;
+
+
+
+// ── Type ─────────────────────────────────────────────────
+$body-font: 'Open Sans', Helvetica, Arial, sans-serif;
+$font-size-base: 1rem;
+$font-size-body: clamp(1.125rem, 1.0833rem + 0.208vw, 1.25rem);
+$line-height-body: clamp(2.025rem, 1.95rem + 0.375vw, 2.25rem);
+
+$nav-txt-size: 1rem; // 18px
+$nav-txt-size-mob: 1.375rem; // 22px
+$nav-txt-weight: 600;
+$nav-txt-spacing: 0.15rem;
+
+// ── Breakpoints ──────────────────────────────────────────
+$min-vw: 375px; // for clamps
+$bp-tablet: 780px;
+$bp-desktop: 1100px;
+$bp-xl: 1400px;
+$bp-xxl: 2000px;
+
+$index-hero-shift: $bp-desktop;
+
+// ── Units ─────────────────────────────────────────────────
+
+$unit-xs: 4px;
+$unit-sm: 8px;
+$unit-rg: 16px;
+$unit-md: 24px;
+$unit-lg: 48px;
+$unit-xl: 96px;
+$unit-xxl: 144px;
+
+$page-pad-sm: $unit-md;
+$page-pad-md: $unit-lg;
+$page-pad-lg: $unit-xl;
+
+// ── Timing ─────────────────────────────────────────────────
+
+$ani-sm: 0.42s;
+$ani-md: 1s;

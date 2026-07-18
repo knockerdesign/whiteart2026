@@ -1,0 +1,160 @@
+@use "vars.scss" as var;
+@use "sass:color";
+
+.galleries {
+    background: var.$galleries-bg;
+    position: relative;
+    // padding: 48px 0 56px;
+}
+
+.galleries-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media (min-width: var.$bp-desktop) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.galleries-heading {
+    position: absolute;
+    color: var.$white;
+    font-size: 5rem;
+    font-weight: 300;
+    top: var.$unit-lg;
+    left: var.$unit-md;
+    // z-index: 100;
+    pointer-events: none;
+    letter-spacing: 0.4rem;
+
+    @media (min-width: var.$bp-desktop) {
+        padding-top: 8px;
+        left: var.$unit-lg;
+
+    }
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px 0;
+    flex: 1;
+
+    @media (min-width: var.$bp-tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: var.$bp-desktop) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+    }
+}
+
+.gallery-card {
+    display: block;
+    padding: 120px var.$page-pad-sm var.$unit-lg var.$page-pad-sm;
+
+    &:first-child {
+        background-color: var.$gallery-card-1;
+
+        &:hover {
+            background-color: color.scale(var.$gallery-card-1, $lightness: -10%);
+        }
+    }
+
+    &:nth-child(2) {
+        background-color: var.$gallery-card-2;
+
+        &:hover {
+            background-color: color.scale(var.$gallery-card-2, $lightness: -10%);
+        }
+    }
+
+    &:nth-child(3) {
+        background-color: var.$gallery-card-3;
+
+        &:hover {
+            background-color: color.scale(var.$gallery-card-3, $lightness: -10%);
+        }
+    }
+
+    &:last-child {
+        background-color: var.$gallery-card-4;
+
+        &:hover {
+            background-color: color.scale(var.$gallery-card-4, $lightness: -10%);
+        }
+    }
+
+    @media (min-width: var.$bp-tablet) {
+        padding: 200px var.$page-pad-md var.$unit-lg var.$page-pad-md;
+
+    }
+
+    .gallery-label {
+        margin-top: 16px;
+        font-size: 2rem;
+        font-weight: 300;
+        color: var.$gallery-label;
+
+    }
+
+    &:hover {
+        .gallery-card-img:before {
+            opacity: 0;
+        }
+    }
+}
+
+.gallery-card-img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 1;
+        transition: opacity var.$ani-sm ease;
+    }
+}
+
+.gallery-card-img--coastal {
+    background-image: url(/images/galleries/gallery-imgs-coast-hover.jpg);
+
+    &:before {
+        background-image: url(/images/galleries/gallery-imgs-coast.jpg);
+    }
+}
+
+.gallery-card-img--navy {
+    background-image: url(/images/galleries/gallery-imgs-navy-hover.jpg);
+
+    &:before {
+        background-image: url(/images/galleries/gallery-imgs-navy.jpg);
+    }
+}
+
+.gallery-card-img--land {
+    background-image: url(/images/galleries/gallery-imgs-land-hover.jpg);
+
+    &:before {
+        background-image: url(/images/galleries/gallery-imgs-land.jpg);
+    }
+}
+
+.gallery-card-img--illust {
+    background-image: url(/images/galleries/gallery-imgs-illust-hover.jpg);
+
+    &:before {
+        background-image: url(/images/galleries/gallery-imgs-illust.jpg);
+    }
+}
