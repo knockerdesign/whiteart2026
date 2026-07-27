@@ -10,37 +10,57 @@
 .galleries-inner {
     display: flex;
     flex-direction: column;
-    gap: 32px;
 
     @media (min-width: var.$bp-desktop) {
-        flex-direction: row;
         align-items: flex-start;
     }
 }
 
-.galleries-heading {
-    position: absolute;
-    color: var.$white;
-    font-size: 5rem;
-    font-weight: 300;
-    top: var.$unit-lg;
-    left: var.$unit-md;
-    // z-index: 100;
-    pointer-events: none;
-    letter-spacing: 0.4rem;
+.galleries-heading-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: var.$unit-xl;
 
-    @media (min-width: var.$bp-desktop) {
-        padding-top: 8px;
-        left: var.$unit-lg;
+    img {
+        max-width: 220px;
 
+        @media (min-width: var.$bp-desktop) {
+
+            max-width: 420px;
+        }
     }
 }
+
+.galleries-heading {
+    color: var.$white;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    pointer-events: none;
+    letter-spacing: 0.4rem;
+    margin: var.$unit-lg var.$unit-rg ;
+
+    @media (min-width: var.$bp-tablet) {
+        margin: var.$unit-lg 0 var.$unit-lg var.$page-pad-sm;
+    }
+
+    @media (min-width: var.$bp-desktop) {
+        font-size: 8rem;
+        letter-spacing: 1.2rem;
+
+        margin: var.$unit-xxl 0 var.$unit-xxl var.$page-pad-md;
+    }
+
+    @media (min-width: var.$bp-xxl) {
+        margin: var.$unit-xxl 0 var.$unit-xxl var.$page-pad-lg;
+    }
+}
+
 
 .gallery-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 32px 0;
-    flex: 1;
+    width: 100%;
 
     @media (min-width: var.$bp-tablet) {
         grid-template-columns: repeat(2, 1fr);
@@ -54,7 +74,8 @@
 
 .gallery-card {
     display: block;
-    padding: 120px var.$page-pad-sm var.$unit-lg var.$page-pad-sm;
+    padding: var.$unit-lg var.$page-pad-md 0 var.$page-pad-sm;
+    transition: background-color var.$ani-sm ease-in-out;
 
     &:first-child {
         background-color: var.$gallery-card-1;
@@ -89,15 +110,33 @@
     }
 
     @media (min-width: var.$bp-tablet) {
-        padding: 200px var.$page-pad-md var.$unit-lg var.$page-pad-md;
+        padding: var.$unit-lg 0 var.$unit-xs 0;
 
+        +.gallery-card {
+            border-left: 1px solid var.$col-grey-50;
+        }
+    }
+
+    @media (min-width: var.$bp-desktop) {
+        padding: var.$unit-lg 0 220px 0;
+
+        +.gallery-card {
+            border-left: 1px solid var.$col-grey-50;
+        }
     }
 
     .gallery-label {
-        margin-top: 16px;
+        margin: 0 0 var.$unit-lg 0;
         font-size: 2rem;
         font-weight: 300;
         color: var.$gallery-label;
+
+        @media (min-width: var.$bp-tablet) {
+            text-align: center;
+            margin: 0 0 var.$unit-lg 0;
+            font-size: 3rem;
+
+        }
 
     }
 
@@ -111,12 +150,13 @@
 .gallery-card-img {
     display: block;
     width: 100%;
-    height: 400px;
+    height: 280px;
     background-size: cover;
     background-position: center;
     position: relative;
 
     &::before {
+        display: none;
         content: '';
         position: absolute;
         inset: 0;
@@ -124,37 +164,45 @@
         background-position: center;
         opacity: 1;
         transition: opacity var.$ani-sm ease;
+
+        @media (min-width: var.$bp-tablet) {
+            display: block;
+        }
+    }
+
+    @media (min-width: var.$bp-desktop) {
+        height: 500px;
     }
 }
 
 .gallery-card-img--coastal {
-    background-image: url(/images/galleries/gallery-imgs-coast-hover.jpg);
+    background-image: url("images/galleries/gallery-imgs-coast-hover.jpg");
 
     &:before {
-        background-image: url(/images/galleries/gallery-imgs-coast.jpg);
+        background-image: url("images/galleries/gallery-imgs-coast.jpg");
     }
 }
 
 .gallery-card-img--navy {
-    background-image: url(/images/galleries/gallery-imgs-navy-hover.jpg);
+    background-image: url("images/galleries/gallery-imgs-navy-hover.jpg");
 
     &:before {
-        background-image: url(/images/galleries/gallery-imgs-navy.jpg);
+        background-image: url("images/galleries/gallery-imgs-navy.jpg");
     }
 }
 
 .gallery-card-img--land {
-    background-image: url(/images/galleries/gallery-imgs-land-hover.jpg);
+    background-image: url("images/galleries/gallery-imgs-land-hover.jpg");
 
     &:before {
-        background-image: url(/images/galleries/gallery-imgs-land.jpg);
+        background-image: url("images/galleries/gallery-imgs-land.jpg");
     }
 }
 
 .gallery-card-img--illust {
-    background-image: url(/images/galleries/gallery-imgs-illust-hover.jpg);
+    background-image: url("images/galleries/gallery-imgs-illust-hover.jpg");
 
     &:before {
-        background-image: url(/images/galleries/gallery-imgs-illust.jpg);
+        background-image: url("images/galleries/gallery-imgs-illust.jpg");
     }
 }

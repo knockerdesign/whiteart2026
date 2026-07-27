@@ -3,26 +3,56 @@
 @use "sass:color";
 
 .art-panel,
-.article-panel,
 .illust-panel {
-    padding-top: 20px;
-    padding-bottom: 50px;
+    margin-top: var.$unit-lg;
+    padding-top: var.$unit-md;
 
+    @media (min-width: var.$bp-tablet) {
+        margin-top: var.$unit-xl;
+        padding-top: var.$unit-lg;
+    }
+
+    @media (min-width: var.$bp-desktop) {
+        margin-top: var.$unit-xxl;
+        padding-top: var.$unit-xl;
+    }
+
+}
+
+
+.article-panel {
+    width: 100%;
+    margin: auto;
+    @media (min-width: var.$bp-tablet) {
+        width: 500px;
+    }
+
+    @media (min-width: var.$bp-desktop) {
+        width: 970px;
+    }
+}
+
+.art-panel h2,
+.illust-panel h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-align: center;
+    margin: 0 0 var.$unit-lg 0;
 }
 
 .art-panel p,
 .illust-panel p {
-    font-size: 0.2rem;
-    margin: 10px 0;
-}
+    font-size: 1rem;
+    line-height: 1.3rem;
+    font-weight: 400;
+    margin: var.$unit-md 0;
 
-@media (min-width: var.$bp-tablet) {
-
-    .art-panel p,
-    .illust-panel p {
-        margin: 20px 0;
+    @media (min-width: var.$bp-tablet) {
+        margin: var.$unit-lg 0;
     }
 }
+
+
 
 .art-panel a,
 .illust-panel a {
@@ -50,26 +80,25 @@
     }
 
     background: linear-gradient(180deg,
-        var.$panelGradient-start 50%,
-        var.$panelGradient-end 100%);
+        var.$panelGradient-start 30%,
+        var.$panelGradient-end 85%,
+        var.$pageBgColor 100%);
 
     @media (min-width: 1400px) {
         background: linear-gradient(90deg, var.$pageBgColor 3%, transparent 20%, transparent 80%, var.$pageBgColor 97%),
             linear-gradient(180deg,
-                var.$panelGradient-start 50%,
-                var.$panelGradient-end 100%)
+                var.$panelGradient-start 30%,
+                var.$panelGradient-end 85%,
+                var.$pageBgColor 100%)
     }
 
     @media (min-width: 2400px) {
         background: linear-gradient(90deg, var.$pageBgColor 10%, transparent 30%, transparent 70%, var.$pageBgColor 90%),
             linear-gradient(180deg,
-                var.$panelGradient-start 50%,
-                var.$panelGradient-end 100%)
+                var.$panelGradient-start 30%,
+                var.$panelGradient-end 85%,
+                var.$pageBgColor 100%)
     }
-}
-
-.close-up {
-    
 }
 
 

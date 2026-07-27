@@ -1,5 +1,5 @@
 /*
-Error: Undefined variable: "$lightGrey".
+Error: Undefined variable: "$col-grey-10".
         on line 12 of /Users/darrellwhite/site/whiteart/scss/images.scss
 
 7:   display: block;
@@ -7,7 +7,7 @@ Error: Undefined variable: "$lightGrey".
 9:     border-left-width 0.5s ease-in-out, border-right-width 0.5s ease-in-out,
 10:     border-top-width 0.5s ease-in-out, border-bottom-width 0.5s ease-in-out;
 11: 
-12:   border-color: $lightGrey;
+12:   border-color: $col-grey-10;
 13:   border-style: solid;
 14:   border-top-width: 9px;
 15:   border-right-width: 9px;
@@ -61,4 +61,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$lightGrey\".\A         on line 12 of /Users/darrellwhite/site/whiteart/scss/images.scss\A \A 7:   display: block;\A 8:   transition: max-height 0.5s ease-in-out, width 0.5s ease-in-out,\A 9:     border-left-width 0.5s ease-in-out, border-right-width 0.5s ease-in-out,\A 10:     border-top-width 0.5s ease-in-out, border-bottom-width 0.5s ease-in-out;\A 11: \A 12:   border-color: $lightGrey;\A 13:   border-style: solid;\A 14:   border-top-width: 9px;\A 15:   border-right-width: 9px;\A 16:   border-bottom-width: 11px;\A 17:   border-left-width: 9px;"; }
+  content: "Error: Undefined variable: \"$col-grey-10\".\A         on line 12 of /Users/darrellwhite/site/whiteart/scss/images.scss\A \A 7:   display: block;\A 8:   transition: max-height 0.5s ease-in-out, width 0.5s ease-in-out,\A 9:     border-left-width 0.5s ease-in-out, border-right-width 0.5s ease-in-out,\A 10:     border-top-width 0.5s ease-in-out, border-bottom-width 0.5s ease-in-out;\A 11: \A 12:   border-color: $col-grey-10;\A 13:   border-style: solid;\A 14:   border-top-width: 9px;\A 15:   border-right-width: 9px;\A 16:   border-bottom-width: 11px;\A 17:   border-left-width: 9px;"; }

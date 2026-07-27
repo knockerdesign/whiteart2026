@@ -1,7 +1,7 @@
 @use "vars.scss" as var;
 
 
-img {
+.gallery-image-thumb {
     width: 96%;
     height: auto;
     margin: 0 2%;
@@ -53,51 +53,49 @@ img {
     }
 }
 
-img:hover {
+.gallery-image-thumb:hover {
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
 }
 
-img.large:hover {
+.gallery-image-thumb.large:hover {
     cursor: default;
 }
 
-img.large+aside {
+.gallery-image-thumb.large+aside {
     margin-right: 15px;
 
-    @media all and (min-width: 530px) {
+    @media screen and (min-width: 530px) {
         margin-right: 0;
     }
 }
 
-img.portrait-img {
+.gallery-image-thumb.portrait-img {
     max-height: 350px;
     height: auto;
 }
 
-@media all and (min-width: 530px) {
-    img {
-        min-height: 80px;
-        min-width: 120px;
-        background-size: 6%;
-        background-position: center;
-        width: 490px;
-        margin: 0 auto;
-    }
 
-    img.large {
+.gallery-image-thumb {
+    background-size: 6%;
+    background-position: center;
+    width: 100%;
+    margin: 0 auto;
+
+
+    &.large {
         width: 100%;
     }
 }
 
-img.large.portrait-img {
+.gallery-image-thumb.large.portrait-img {
     width: auto;
     max-height: 800px;
     max-width: calc(100vw - 20px);
     margin: 0 auto;
 }
 
-img.no-enlarge:hover {
+.gallery-image-thumb.no-enlarge:hover {
     cursor: auto;
 }
 
@@ -107,34 +105,10 @@ a img.staticBanner {
     }
 }
 
-.darrell-mug-shot {
-    margin-top: 90px;
-}
 
 
 aside {
     text-align: right;
-    float: right;
-    margin-right: 4%;
-    transition: margin-right 1s ease-in-out;
-}
-
-@media all and (min-width: 768px) {
-    aside {
-        margin-right: 17%;
-    }
-}
-
-@media all and (min-width: 992px) {
-    aside {
-        margin-right: 24.5%;
-    }
-}
-
-@media all and (min-width: 1200px) {
-    aside {
-        margin-right: 29%;
-    }
 }
 
 aside.sketches {

@@ -1,3 +1,6 @@
+@use "sass:color";
+
+
 $base-unit: 0.5rem; // changes base unit to 8px
 
 $unit-xxs: $base-unit; // 4px
@@ -16,13 +19,16 @@ $darkGrey: #393e40;
 $grey6: #7b8589;
 $grey5: #acb9bf;
 $blueGrey: #cfdee6;
-$lightGrey: #eee;
+$col-grey-10: #eee;
 $white: #fff;
 
 $pageBgColor: #f0eeeb;
+
+$navBgCol: $body-text-col;
 $navActive: rgb(25, 187, 251);
 $navHover: $blueGrey;
 $navActiveBg: rgb(10, 90, 122);
+$navButtonMob: color.scale($navBgCol, $lightness: 10%);
 
 $panelGradient-start: $grey5;
 $panelGradient-end: rgb(226, 234, 238);

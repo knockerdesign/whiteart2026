@@ -14,49 +14,36 @@
         padding-left: var.$page-pad-md;
 
     }
-}
 
-.hero-copy {
-    // display: inline-block; // inline block so the container constrains to the size of the text, thus the border is an underline
-    // h1 {
-    //     font-size: clamp(3.5rem, 3.0385rem + 1.9692vw, 5.5rem);
-    //     font-weight: 300;
-    //     margin-bottom: 6px;
-    //     text-align: left;
-    //     letter-spacing: 0.1rem;
-
-    //     @media (min-width: var.$index-hero-shift) {
-    //         margin-bottom: var.$unit-sm;
-    //     }
-    // }
-    
-    @media (min-width: var.$bp-xl) {
-        max-width: 800px;
-        margin: var.$unit-lg 0;
+    @media (min-width: var.$bp-xxl) {
+        padding-left: var.$page-pad-lg;
     }
 }
 
-// .hero-subtitle {
-//     font-size: clamp(1.53rem, 1.3108rem + 0.9354vw, 2.48rem);
-//     text-transform: uppercase;
-//     letter-spacing: 0.17rem;
-//     color: var.$col-grey-blue;
-//     border-top: 1px solid var.$col-grey-blue;
-//     margin-bottom: 0;
-//     padding-top: var.$unit-xs;
-//     padding-left: 2px; // visual tweak to align text with Darrell White heading
+.hero-copy {
+    transition: width var.$ani-md ease-in-out, margin var.$ani-md ease-in-out;
+    width: 100%;
+    margin: var.$unit-sm 0;
 
-//     @media (min-width: var.$index-hero-shift) {
-//         letter-spacing: 0.17rem;
-//         margin-bottom: var.$unit-md;
-//         padding-top: var.$unit-xs;
-//         padding-left: var.$unit-xs; // visual tweak to align text
-//     }
+    @media (min-width: var.$bp-tablet) {
+        width: 550px;
+        margin: var.$unit-rg 0;
+    }
 
-//     @media (min-width: var.$bp-xl) {
-//         padding-top: var.$unit-sm;
-//     }
-// }
+    @media (min-width: var.$bp-desktop) {
+        width: 650px;
+        margin: var.$unit-md 0;
+    }
+
+    @media (min-width: var.$bp-xl) {
+        width: 720px;
+        margin: var.$unit-lg 0;
+    }
+
+    @media (min-width: var.$bp-xxl) {
+        width: 840px;
+    }
+}
 
 .hero-image {
     display: none;

@@ -3,22 +3,22 @@
 
 .about {
     background: var.$about-bg;
-    padding: 48px 0 64px;
+    padding: 0;
 }
 
 .about-inner {
     display: flex;
     flex-direction: column;
-    gap: 32px;
 
     @media (min-width: var.$bp-tablet) {
         flex-direction: row;
-        align-items: flex-start;
-        gap: 48px;
+        align-items: stretch;
     }
 }
 
 .about-photo {
+    background-color: var.$DarkChoc;
+
     @media (min-width: var.$bp-tablet) {
         flex: 0 0 30%;
     }
@@ -30,16 +30,22 @@
 }
 
 .about-copy {
-    flex: 1;
+    padding: var.$unit-lg;
 
-    h2 {
-        font-size: 1.9rem;
-        font-weight: 400;
-        margin-bottom: 0.6em;
+    @media (min-width: var.$bp-tablet) {
+        padding: var.$unit-xl var.$unit-lg var.$unit-lg;
+    }
+
+    @media (min-width: var.$bp-desktop) {
+        padding: var.$unit-xl;
+    }
+
+    @media (min-width: var.$bp-xxl) {
+        padding: var.$unit-xxl var.$unit-xl var.$unit-xxl 240px;
     }
 
     p {
-        font-size: 0.95rem;
-        color: var.$about-text;
+        max-width: 920px;
+
     }
 }

@@ -5,7 +5,7 @@ body {
     padding-top: 30px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: var.$bp-tablet) {
     body {
         padding-top: 0;
     }
@@ -34,7 +34,7 @@ body {
         clear: both;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: var.$bp-tablet) {
         width: 750px;
     }
 
@@ -54,7 +54,7 @@ body {
 .container-sketches {
     margin: 0 var.$unit-lg;
 
-    @media (min-width: 768px) {
+    @media (min-width: var.$bp-tablet) {
         width: 750px;
         margin: 0 auto;
     }

@@ -152,7 +152,7 @@ form.addEventListener('submit', async function(e) {
     if (result.success) {
       var sheet = document.getElementById('contactSheet');
       var heading = sheet.querySelector('h2');
-      var subtitle = sheet.querySelector('.sheet-subtitle');
+      var subtitle = sheet.querySelector('.modal-subtitle');
       form.style.display = 'none';
       if (heading) heading.style.display = 'none';
       if (subtitle) subtitle.style.display = 'none';

@@ -44,6 +44,7 @@
     flex-direction: column;
     width: 100%;
     order: 3;
+    background-color: var.$nav-bg; // give bg colour so margins on mob show horizontal rules between btns
 
     max-height: 0;
     overflow: hidden;
@@ -69,21 +70,30 @@
         a {
             display: block;
             padding: var.$unit-rg var.$unit-rg;
-            color: var.$nav-text;
-            font-size: var.$nav-txt-size;
-            font-weight: var.$nav-txt-weight;
-            letter-spacing: var.$nav-txt-spacing;
+            color: var.$nav-text-mob;
+            font-size: var.$nav-txt-size-mob;
+            font-weight: var.$nav-txt-weight-mob;
+            letter-spacing: var.$nav-txt-spacing-mob;
             text-align: center;
-            transition: background 0.2s ease, color 0.2s ease;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            background-color: var.$navButtonMob;
+            margin-bottom: 1px;
 
             &:hover {
-                background: var.$col-grey-55;
+                background-color: var.$col-grey-55;
             }
 
             @media (min-width: var.$bp-tablet) {
+                color: var.$nav-text;
+                font-size: var.$nav-txt-size;
+                font-weight: var.$nav-txt-weight;
+                letter-spacing: var.$nav-txt-spacing;
                 padding: var.$unit-sm var.$unit-rg;
                 height: 100%;
                 width: 100%;
+                background-color: var.$nav-bg;
+                margin-bottom: 0;
+
             }
         }
     }
@@ -92,6 +102,7 @@
         background: var.$nav-active-bg;
         color: var.$nav-active-text;
         position: relative;
+        font-weight: var.$nav-txt-weight;
 
         &::after {
             display: block;
@@ -128,9 +139,14 @@
     font-size: var.$nav-txt-size;
     font-weight: var.$nav-txt-weight;
     letter-spacing: 0.02em;
-    height: 100%;
+    height: 48px;
     cursor: pointer;
     transition: background 0.2s ease;
+
+    @media (min-width: var.$bp-tablet) {
+        height: 100%;
+
+    }
 
     &:hover {
         background: var.$accent-green-hover;

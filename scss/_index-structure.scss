@@ -58,8 +58,11 @@
     padding: var.$unit-lg var.$page-pad-md;
 
     @media (min-width: var.$bp-desktop) {
-        padding: var.$unit-lg var.$page-pad-md var.$unit-xl var.$page-pad-md;
+        padding: var.$unit-sm var.$page-pad-md var.$unit-xl var.$page-pad-md;
+    }
 
+    @media (min-width: var.$bp-xxl) {
+        padding: var.$unit-sm var.$page-pad-md var.$unit-xl var.$page-pad-lg;
     }
 }
 

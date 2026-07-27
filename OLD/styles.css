@@ -10,7 +10,7 @@ body {
   padding-top: 30px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: var.$bp-tablet) {
   body {
     padding-top: 0;
   }
@@ -34,7 +34,7 @@ body {
 .container:after {
   clear: both;
 }
-@media (min-width: 768px) {
+@media (min-width: var.$bp-tablet) {
   .container {
     width: 750px;
   }
@@ -58,7 +58,7 @@ body {
 .container-sketches {
   margin: 0 4rem;
 }
-@media (min-width: 768px) {
+@media (min-width: var.$bp-tablet) {
   .container-sketches {
     width: 750px;
     margin: 0 auto;
@@ -451,7 +451,7 @@ aside.sketches {
   margin: 10px 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: var.$bp-tablet) {
   .art-panel p,
   .illust-panel p {
     margin: 20px 0;
@@ -640,7 +640,7 @@ aside.sketches {
   transform: translateY(110%);
   transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1);
 }
-@media (min-width: 768px) {
+@media (min-width: var.$bp-tablet) {
   .contact-sheet {
     right: 40px;
     left: inherit;
@@ -808,7 +808,7 @@ aside.sketches {
 .mastheadText {
   margin: 2rem 0 0 0;
 }
-@media (min-width: 768px) {
+@media (min-width: var.$bp-tablet) {
   .mastheadText {
     margin: 4.2rem 0 0 0;
   }

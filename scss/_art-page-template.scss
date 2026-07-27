@@ -1,0 +1,111 @@
+@use "vars.scss" as var;
+
+body {
+    background-color: var.$pageBgColor;
+    padding-top: 30px;
+}
+
+@media (min-width: var.$bp-tablet) {
+    body {
+        padding-top: 0;
+    }
+}
+
+.whiteArtPage {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+
+.art-container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: var.$page-pad-sm;
+    padding-right:  var.$page-pad-sm;
+    transition: width var.$ani-md ease-in-out;
+
+    &:has(.large) {
+        width: 100%;
+    }
+
+    @media (min-width: var.$bp-tablet) {
+        width: 550px;
+    &:has(.large) {
+
+        padding-left: var.$page-pad-md;
+        padding-right:  var.$page-pad-md;
+    }
+    }
+
+    @media (min-width: var.$bp-desktop) {
+        width: 640px;
+    &:has(.large) {
+        padding-left: var.$page-pad-lg;
+        padding-right:  var.$page-pad-lg;
+    }
+    }
+
+    @media (min-width: var.$bp-xl) {
+        width: 720px;
+    }
+
+    @media (min-width: var.$bp-xxl) {
+        width: 820px;
+
+        &:has(.large) {
+            width: 1620px;
+        }
+    }
+}
+
+.container-sketches {
+    margin: 0 var.$page-pad-sm;
+
+    @media (min-width: var.$bp-tablet) {
+        // width: 750px;
+        // margin: 0 auto;
+        margin: 0 var.$page-pad-lg;
+
+    }
+
+    @media (min-width: var.$bp-desktop) {
+        // width: 1100px;
+        // margin: 0 var.$page-pad-lg;
+
+    }
+
+    @media (min-width: var.$bp-xl) {
+        // width: 1400px;
+    }
+
+    @media (min-width: 1700px) {
+        // width: 1600px;
+    }
+
+    @media (min-width: 2000px) {
+        // width: 1900px;
+    }
+}
+
+.sketch-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var.$unit-lg;
+
+    @media (min-width: var.$bp-desktop) {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    @media (min-width: var.$bp-xxl) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.sketch-section-heading {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+}

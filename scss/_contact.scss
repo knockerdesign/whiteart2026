@@ -3,8 +3,8 @@
 
 .contact-overlay {
     position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    bottom: 0;
+    right: var.$unit-lg;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,6 +26,8 @@
 
 .contact-modal {
     background: var.$white;
+    box-shadow: 2px 2px 11px 0 rgba(0, 0, 0, 0.5), 1px 1px 22px 0 rgba(0, 0, 0, 0.5);
+
     width: 100%;
     max-width: 420px;
     padding: 36px 32px 32px;
@@ -34,15 +36,12 @@
     transition: transform 0.25s ease;
 
     h2 {
-        font-size: 1.5rem;
-        margin-bottom: 4px;
+        margin: var.$unit-rg 0 var.$unit-lg;
     }
 }
 
 .modal-subtitle {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 24px;
+    margin: var.$unit-md 0;
 }
 
 .modal-close {
@@ -51,7 +50,7 @@
     right: 12px;
     background: none;
     border: none;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: #666;
     cursor: pointer;
     padding: 8px;
@@ -66,7 +65,7 @@
 
     label {
         display: block;
-        font-size: 0.85rem;
+        // font-size: 0.85rem;
         margin-bottom: 6px;
         color: #444;
     }
@@ -92,8 +91,8 @@
 
     .error-msg {
         display: none;
-        color: #c0392b;
-        font-size: 0.8rem;
+        color: #cc2411;
+        font-weight: 400;
         margin-top: 4px;
     }
 
@@ -101,7 +100,7 @@
 
         input,
         textarea {
-            border-color: #c0392b;
+            border-color: #cc2411;
         }
 
         .error-msg {
@@ -114,10 +113,11 @@
     width: 100%;
     background: var.$accent-green;
     color: var.$white;
+    font-weight: 600;
     border: none;
     padding: 12px;
     font-family: var.$body-font;
-    font-size: 1rem;
+    font-size: 1.25rem;
     cursor: pointer;
     transition: background 0.2s ease;
 
@@ -134,8 +134,10 @@
 .modal-success {
     display: none;
     text-align: center;
-    padding: 12px 0 4px;
-    font-size: 0.95rem;
+    padding: var.$unit-lg 0;
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
 
     &.visible {
         display: block;

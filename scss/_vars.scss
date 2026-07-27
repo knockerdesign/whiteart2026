@@ -1,25 +1,36 @@
+@use "sass:color";
+
 // ── Palette ──────────────────────────────────────────────
 
+$white: #fff;
 
+$grey5: #acb9bf;
 $col-grey-10: #e0e0e0;
+$col-warm-grey-20: #B2ABA8;
 $col-grey-50: #7B8589;
 $col-grey-55: #757575;
 $col-grey-blue: #ACB9BF;
 $grey6: #7b8589;
 $darkGrey: #393e40;
-$col-grey-90: #222;
+$DarkChoc: #20130C;
 
 $col-azure: #19BBFB;
 
-$hero-bg: $col-grey-90;
-$nav-bg: $col-grey-90;
+$hero-bg: $DarkChoc;
+
+$nav-bg: #342A26;
+$nav-text-mob: $white;
 $nav-text: $col-grey-10;
 $nav-hover: #d8d2c8;
 $nav-active-bg: #0090C9;
 $nav-active-text: #ffffff;
+$navButtonMob: #494240;
 
 $body-text-col: #222;
 
+$pageBgColor: #f0eeeb;
+$panelGradient-start: $grey5;
+$panelGradient-end: rgb(226, 234, 238);
 
 $forSale: #022802;
 $sold: #ff0000;
@@ -27,7 +38,7 @@ $sold: #ff0000;
 $link: #428bca;
 $link-hover: #2a6496;
 
-$galleries-bg: #ACB9BF;
+$galleries-bg: $col-grey-blue;
 $gallery-label: #2c3236;
 $gallery-card-1: #A4B2B8;
 $gallery-card-2: #9CAAB1;
@@ -41,7 +52,6 @@ $accent-green: #01ae23;
 $accent-green-hover: #019a1f;
 $fb-blue: #1877f2;
 
-$white: #fff;
 
 
 
@@ -49,11 +59,13 @@ $white: #fff;
 $body-font: 'Open Sans', Helvetica, Arial, sans-serif;
 $font-size-base: 1rem;
 $font-size-body: clamp(1.125rem, 1.0833rem + 0.208vw, 1.25rem);
-$line-height-body: clamp(2.025rem, 1.95rem + 0.375vw, 2.25rem);
+$line-height-body: clamp(1.65rem, 1.575rem + 0.375vw, 1.875rem);
 
 $nav-txt-size: 1rem; // 18px
 $nav-txt-size-mob: 1.375rem; // 22px
+$nav-txt-weight-mob: 300;
 $nav-txt-weight: 600;
+$nav-txt-spacing-mob: 0.2rem;
 $nav-txt-spacing: 0.15rem;
 
 // ── Breakpoints ──────────────────────────────────────────

@@ -2,9 +2,8 @@
 
 
 .site-footer {
-    background: var.$hero-bg;
-    color: rgba(var.$white, 0.6);
+    background: var.$col-grey-blue;
+    color: var.$DarkChoc;
     text-align: center;
-    font-size: 0.85rem;
-    padding: 20px 0;
+    padding: var.$unit-lg 0;
 }
