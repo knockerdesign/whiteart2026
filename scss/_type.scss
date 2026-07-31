@@ -12,8 +12,9 @@ body {
 
 h1 {
     font-weight: 300;
-    font-size: 4rem;
-    text-align: center;
+    font-size: 4.5rem;
+    text-align: left;
+    letter-spacing: 0.55rem;
     line-height: 3rem;
     margin: 0 0 30px 0;
 }
@@ -29,13 +30,16 @@ h1 {
 
 
 
+
+
 h2 {
     font-size: 2.5rem;
-    margin: 0;
     font-weight: 300;
+    line-height: 3rem;
+    margin: 0 0 var.$unit-lg 0;
 
     @media screen and (min-width: var.$bp-tablet) {
-        font-size: 3.5rem;
+        font-size: 3.75rem;
     }
 
     +p {
@@ -50,20 +54,13 @@ h2 {
 
 h3 {
     font-size: 1.8rem;
-    margin-bottom: 20px;
+    margin-top: var.$unit-lg;
     font-weight: 300;
+    line-height: 2.5rem;
 
-    @media (min-width: 600px) {
-        &.title-indent {
-            text-indent: -12px;
-        }
+    @media screen and (min-width: var.$bp-desktop) {
+        margin-top: var.$unit-xl;
 
-        &.title-indent span {
-            color: #888;
-            vertical-align: top;
-            margin: 0 3px;
-            display: inline;
-        }
     }
 }
 
@@ -92,6 +89,9 @@ p {
     font-size: var.$font-size-body;
     line-height: var.$line-height-body;
 }
+p {
+    max-width: var.$text-max-width
+}
 
 
 h2.standardHeading {
@@ -106,7 +106,9 @@ h2.standardHeading {
 
 
 a {
-    background: 0 0;
+    color: var.$link;
+    text-decoration-color: var.$link-underline;
+    text-decoration-thickness: 1px;
     text-underline-offset: 4px;
 }
 
@@ -115,13 +117,12 @@ a:hover {
     outline: 0;
 }
 
-a {
-    color: var.$link;
-}
+
 
 a:focus,
 a:hover {
     color: var.$link-hover;
+    text-decoration-color: var.$link-underline-hover;
 }
 
 a:focus {
@@ -131,30 +132,23 @@ a:focus {
 }
 
 
-.remove-bottom-margin {
-    margin-bottom: 0;
-}
+span.forSale,
+a.forSaleLink,
+.buyPrints-link,
+.buyPrints-link:active,
+.buyPrints-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid var.$forSale;
+    color: var.$forSale;
+    margin: var.$unit-sm 0 0 var.$unit-md;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
-.art-panel {
-
-    span.forSale,
-    a.forSaleLink,
-    .buyPrints-link,
-    .buyPrints-link:active,
-    .buyPrints-link:visited {
-        display: inline-block;
-        text-decoration: none;
-        padding: 8px 12px;
-        border: 1px solid var.$forSale;
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(11, 212, 11, 0.5);
         color: var.$forSale;
-        margin: var.$unit-sm 0 0 var.$unit-md;
-        transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-
-        &:hover {
-            cursor: pointer;
-            background-color: rgba(11, 212, 11, 0.5);
-            color: var.$forSale;
-        }
     }
 }
 
@@ -171,4 +165,12 @@ span.sold {
     background: var.$sold;
     margin-right: var.$unit-sm;
     vertical-align: text-bottom;
+}
+
+.text-semibold {
+    font-weight: 500;
+}
+
+.align-center {
+    text-align: center;
 }

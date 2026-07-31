@@ -16,6 +16,7 @@ body {
   font-size: 16px;
   line-height: 1.6rem;
   -webkit-font-smoothing: antialiased;
+  background-color: #efeeed;
 }
 
 img {
@@ -25,7 +26,6 @@ img {
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 h1,
@@ -123,8 +123,9 @@ body {
 
 h1 {
   font-weight: 300;
-  font-size: 4rem;
-  text-align: center;
+  font-size: 4.5rem;
+  text-align: left;
+  letter-spacing: 0.55rem;
   line-height: 3rem;
   margin: 0 0 30px 0;
 }
@@ -138,12 +139,13 @@ h1 {
 }
 h2 {
   font-size: 2.5rem;
-  margin: 0;
   font-weight: 300;
+  line-height: 3rem;
+  margin: 0 0 48px 0;
 }
 @media screen and (min-width: 780px) {
   h2 {
-    font-size: 3.5rem;
+    font-size: 3.75rem;
   }
 }
 h2 + p {
@@ -157,18 +159,13 @@ h2 + p {
 
 h3 {
   font-size: 1.8rem;
-  margin-bottom: 20px;
+  margin-top: 48px;
   font-weight: 300;
+  line-height: 2.5rem;
 }
-@media (min-width: 600px) {
-  h3.title-indent {
-    text-indent: -12px;
-  }
-  h3.title-indent span {
-    color: #888;
-    vertical-align: top;
-    margin: 0 3px;
-    display: inline;
+@media screen and (min-width: 1100px) {
+  h3 {
+    margin-top: 96px;
   }
 }
 
@@ -195,6 +192,10 @@ p {
   line-height: clamp(1.65rem, 1.575rem + 0.375vw, 1.875rem);
 }
 
+p {
+  max-width: 970px;
+}
+
 h2.standardHeading {
   font-weight: 300;
   margin: 2rem 0 1rem 0;
@@ -207,7 +208,9 @@ h2.standardHeading {
 }
 
 a {
-  background: 0 0;
+  color: #1b67a9;
+  text-decoration-color: #5da4e1;
+  text-decoration-thickness: 1px;
   text-underline-offset: 4px;
 }
 
@@ -216,13 +219,10 @@ a:hover {
   outline: 0;
 }
 
-a {
-  color: #428bca;
-}
-
 a:focus,
 a:hover {
-  color: #2a6496;
+  color: #0e3b62;
+  text-decoration-color: #1b67a9;
 }
 
 a:focus {
@@ -231,15 +231,11 @@ a:focus {
   outline-offset: -2px;
 }
 
-.remove-bottom-margin {
-  margin-bottom: 0;
-}
-
-.art-panel span.forSale,
-.art-panel a.forSaleLink,
-.art-panel .buyPrints-link,
-.art-panel .buyPrints-link:active,
-.art-panel .buyPrints-link:visited {
+span.forSale,
+a.forSaleLink,
+.buyPrints-link,
+.buyPrints-link:active,
+.buyPrints-link:visited {
   display: inline-block;
   text-decoration: none;
   padding: 8px 12px;
@@ -248,11 +244,11 @@ a:focus {
   margin: 8px 0 0 24px;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
-.art-panel span.forSale:hover,
-.art-panel a.forSaleLink:hover,
-.art-panel .buyPrints-link:hover,
-.art-panel .buyPrints-link:active:hover,
-.art-panel .buyPrints-link:visited:hover {
+span.forSale:hover,
+a.forSaleLink:hover,
+.buyPrints-link:hover,
+.buyPrints-link:active:hover,
+.buyPrints-link:visited:hover {
   cursor: pointer;
   background-color: rgba(11, 212, 11, 0.5);
   color: #022802;
@@ -270,6 +266,14 @@ span.sold {
   background: #ff0000;
   margin-right: 8px;
   vertical-align: text-bottom;
+}
+
+.text-semibold {
+  font-weight: 500;
+}
+
+.align-center {
+  text-align: center;
 }
 
 .site-nav {
@@ -350,6 +354,7 @@ span.sold {
   transition: background-color 0.2s ease, color 0.2s ease;
   background-color: #494240;
   margin-bottom: 1px;
+  text-decoration: none;
 }
 .nav-links li a:hover {
   background-color: #757575;
@@ -492,6 +497,43 @@ span.sold {
     width: 840px;
   }
 }
+.hero--navy .hero-copy {
+  margin: 16px 0;
+}
+
+.hero--navy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 48px;
+  padding-bottom: 48px;
+  padding-top: 48px;
+  padding-left: 24px;
+  background-color: #20130C;
+  color: #fff;
+}
+.hero--navy img {
+  display: none;
+}
+@media (min-width: 780px) {
+  .hero--navy {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .hero--navy img {
+    display: block;
+    width: 340px;
+  }
+}
+@media (min-width: 1100px) {
+  .hero--navy {
+    padding-left: 48px;
+    flex-direction: column;
+  }
+  .hero--navy img {
+    width: 300px;
+  }
+}
 
 .hero-image {
   display: none;
@@ -499,9 +541,28 @@ span.sold {
 @media (min-width: 1100px) {
   .hero-image {
     display: block;
-    background: url(images/close-ups/sydney-awd-close-up.jpg) center center no-repeat;
+    background-image: url(images/close-ups/sydney-awd-close-up.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
   }
+}
+
+.hero-image--navy {
+  background-image: url(images/galleries/gallery-imgs-navy-hover.jpg);
+  background-position: center -60px;
+}
+
+.hero-image--coastal {
+  background-image: url(images/galleries/gallery-imgs-coastal-hover.jpg);
+}
+
+.hero-image--land {
+  background-image: url(images/galleries/gallery-imgs-land-hover.jpg);
+}
+
+.hero-image--land {
+  background-image: url(images/galleries/gallery-imgs-illust-hover.jpg);
 }
 
 .intro-text {
@@ -543,10 +604,24 @@ span.sold {
 .galleries-inner {
   display: flex;
   flex-direction: column;
+  margin-top: 16px;
 }
 @media (min-width: 1100px) {
   .galleries-inner {
     align-items: flex-start;
+    margin-top: 48px;
+  }
+}
+@media (min-width: 1400px) {
+  .galleries-inner {
+    align-items: flex-start;
+    margin-top: 96px;
+  }
+}
+@media (min-width: 2000px) {
+  .galleries-inner {
+    align-items: flex-start;
+    margin-top: 96px;
   }
 }
 
@@ -557,7 +632,13 @@ span.sold {
   gap: 96px;
 }
 .galleries-heading-wrapper img {
-  max-width: 220px;
+  display: none;
+}
+@media (min-width: 780px) {
+  .galleries-heading-wrapper img {
+    max-width: 220px;
+    display: block;
+  }
 }
 @media (min-width: 1100px) {
   .galleries-heading-wrapper img {
@@ -604,14 +685,14 @@ span.sold {
 @media (min-width: 1100px) {
   .gallery-grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 0;
   }
 }
 
 .gallery-card {
   display: block;
-  padding: 48px 48px 0 24px;
+  padding: 48px 24px 0 24px;
   transition: background-color 0.42s ease-in-out;
+  text-decoration: none;
 }
 .gallery-card:first-child {
   background-color: #A4B2B8;
@@ -633,6 +714,12 @@ span.sold {
 }
 .gallery-card:last-child {
   background-color: #8A9BA2;
+  padding-bottom: 48px;
+}
+@media (min-width: 780px) {
+  .gallery-card:last-child {
+    padding-bottom: 0;
+  }
 }
 .gallery-card:last-child:hover {
   background-color: rgb(121.2857142857, 140.7142857143, 148.7142857143);
@@ -654,7 +741,7 @@ span.sold {
   }
 }
 .gallery-card .gallery-label {
-  margin: 0 0 48px 0;
+  margin: 0 0 24px 0;
   font-size: 2rem;
   font-weight: 300;
   color: #2c3236;
@@ -673,7 +760,7 @@ span.sold {
 .gallery-card-img {
   display: block;
   width: 100%;
-  height: 280px;
+  height: 200px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -727,33 +814,53 @@ span.sold {
   background-image: url("images/galleries/gallery-imgs-illust.jpg");
 }
 
+.art-section {
+  margin-top: 48px;
+}
+@media (min-width: 780px) {
+  .art-section {
+    margin-top: 96px;
+  }
+}
+@media (min-width: 1100px) {
+  .art-section {
+    margin-top: 144px;
+  }
+}
+.art-section:first-of-type {
+  margin-top: 0;
+}
+.art-section:first-of-type .art-panel {
+  background-image: url("images/art-panel-bg-san-paper.jpg");
+}
+
 .art-panel,
 .illust-panel {
-  margin-top: 48px;
-  padding-top: 24px;
+  padding-top: 96px;
 }
 @media (min-width: 780px) {
   .art-panel,
   .illust-panel {
-    margin-top: 96px;
-    padding-top: 48px;
+    padding-top: 240px;
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 2000px) {
   .art-panel,
   .illust-panel {
-    margin-top: 144px;
-    padding-top: 96px;
+    padding-top: 300px;
   }
 }
 
 .article-panel {
   width: 100%;
   margin: auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 @media (min-width: 780px) {
   .article-panel {
-    width: 500px;
+    padding-left: 48px;
+    padding-right: 48px;
   }
 }
 @media (min-width: 1100px) {
@@ -762,87 +869,81 @@ span.sold {
   }
 }
 
-.art-panel h2,
-.illust-panel h2 {
-  font-size: 2.5rem;
-  line-height: 3rem;
-  text-align: center;
-  margin: 0 0 48px 0;
-}
-
-.art-panel p,
-.illust-panel p {
-  font-size: 1rem;
-  line-height: 1.3rem;
-  font-weight: 400;
-  margin: 24px 0;
-}
-@media (min-width: 780px) {
-  .art-panel p,
-  .illust-panel p {
-    margin: 48px 0;
-  }
-}
-
-.art-panel a,
-.illust-panel a {
-  color: #aaa;
-}
-
-.art-panel a:hover,
-.illust-panel a:hover {
-  color: #f8f8f8;
-}
-
 .art-panel,
 .illust-panel {
-  background-color: #acb9bf;
+  background-image: url("images/art-panel-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 180%;
   color: #222;
-  background: linear-gradient(180deg, #acb9bf 30%, rgb(226, 234, 238) 85%, #f0eeeb 100%);
+}
+@media (min-width: 780px) {
+  .art-panel,
+  .illust-panel {
+    background-size: 120%;
+  }
 }
 .art-panel h2,
 .illust-panel h2 {
-  font-weight: 300;
   color: #393e40;
 }
 .art-panel h3,
 .illust-panel h3 {
   color: #393e40;
 }
-@media (min-width: 1400px) {
-  .art-panel,
-  .illust-panel {
-    background: linear-gradient(90deg, #f0eeeb 3%, transparent 20%, transparent 80%, #f0eeeb 97%), linear-gradient(180deg, #acb9bf 30%, rgb(226, 234, 238) 85%, #f0eeeb 100%);
-  }
-}
-@media (min-width: 2400px) {
-  .art-panel,
-  .illust-panel {
-    background: linear-gradient(90deg, #f0eeeb 10%, transparent 30%, transparent 70%, #f0eeeb 90%), linear-gradient(180deg, #acb9bf 30%, rgb(226, 234, 238) 85%, #f0eeeb 100%);
-  }
-}
 
-.section-divide {
-  margin: 50px 0 80px 20%;
-  clear: both;
-  width: 60%;
-  position: relative;
+.close-up-panel {
+  margin-top: 48px;
 }
-
-body {
-  background-color: #f0eeeb;
-  padding-top: 30px;
-}
-
 @media (min-width: 780px) {
-  body {
-    padding-top: 0;
+  .close-up-panel {
+    margin-top: 96px;
   }
 }
-.whiteArtPage {
+
+.art-panel-aside {
   display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 24px auto 48px auto;
+  transition: width 1s ease-in-out;
+}
+.art-panel-aside .aside-client,
+.art-panel-aside .aside-forSale {
+  grid-column: 1/-1;
+}
+.art-panel-aside .aside-forSale {
+  text-align: right;
+}
+.art-panel-aside .aside-dimensions {
+  text-align: right;
+}
+.art-panel-aside p {
+  font-size: 1rem;
+  line-height: 1.3rem;
+  font-weight: 400;
+  margin: 0;
+}
+@media (min-width: 780px) {
+  .art-panel-aside {
+    padding: 0 24px;
+    width: 550px;
+  }
+}
+@media (min-width: 1100px) {
+  .art-panel-aside {
+    width: 640px;
+  }
+}
+@media (min-width: 1400px) {
+  .art-panel-aside {
+    width: 720px;
+  }
+}
+@media (min-width: 2000px) {
+  .art-panel-aside {
+    width: 820px;
+  }
 }
 
 .art-container {
@@ -1008,10 +1109,6 @@ body {
 
 a img.staticBanner:hover {
   cursor: pointer;
-}
-
-aside {
-  text-align: right;
 }
 
 aside.sketches {

@@ -43,6 +43,49 @@
     @media (min-width: var.$bp-xxl) {
         width: 840px;
     }
+
+    .hero--navy & {
+        margin: var.$unit-rg 0;
+    }
+}
+
+.hero--navy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var.$unit-lg;
+    padding-bottom: var.$unit-lg;
+    padding-top: var.$unit-lg;
+    padding-left: var.$page-pad-sm;
+    background-color: var.$hero-bg;
+    color: var.$white;
+
+    img {
+        // My logo image
+        display: none;
+    }
+
+    @media (min-width: var.$bp-tablet) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        img {
+            display: block;
+            width: 340px
+        }
+    }
+
+    @media (min-width: var.$index-hero-shift) {
+        padding-left: var.$page-pad-md;
+        flex-direction: column;
+
+        img {
+            width: 300px
+        }
+    }
+
+
+
 }
 
 .hero-image {
@@ -50,9 +93,28 @@
 
     @media (min-width: var.$index-hero-shift) {
         display: block;
-        background: url(images/close-ups/sydney-awd-close-up.jpg) center center no-repeat;
+        background-image: url(images/close-ups/sydney-awd-close-up.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
         background-size: cover;
     }
+}
+
+.hero-image--navy {
+    background-image: url(images/galleries/gallery-imgs-navy-hover.jpg);
+    background-position: center -60px;
+}
+
+.hero-image--coastal {
+    background-image: url(images/galleries/gallery-imgs-coastal-hover.jpg);
+}
+
+.hero-image--land {
+    background-image: url(images/galleries/gallery-imgs-land-hover.jpg);
+}
+
+.hero-image--land {
+    background-image: url(images/galleries/gallery-imgs-illust-hover.jpg);
 }
 
 .intro-text {

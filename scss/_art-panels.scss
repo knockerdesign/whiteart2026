@@ -2,19 +2,36 @@
 
 @use "sass:color";
 
-.art-panel,
-.illust-panel {
+.art-section {
     margin-top: var.$unit-lg;
-    padding-top: var.$unit-md;
 
     @media (min-width: var.$bp-tablet) {
         margin-top: var.$unit-xl;
-        padding-top: var.$unit-lg;
     }
 
     @media (min-width: var.$bp-desktop) {
         margin-top: var.$unit-xxl;
-        padding-top: var.$unit-xl;
+    }
+
+    &:first-of-type {
+        margin-top: 0;
+
+        .art-panel {
+            background-image: url("images/art-panel-bg-san-paper.jpg");
+        }
+    }
+}
+
+.art-panel,
+.illust-panel {
+    padding-top: var.$unit-xl;
+
+    @media (min-width: var.$bp-tablet) {
+        padding-top: 240px;
+    }
+
+    @media (min-width: var.$bp-xxl) {
+        padding-top: 300px;
     }
 
 }
@@ -23,8 +40,12 @@
 .article-panel {
     width: 100%;
     margin: auto;
+    padding-left: var.$page-pad-sm;
+    padding-right: var.$page-pad-sm;
+
     @media (min-width: var.$bp-tablet) {
-        width: 500px;
+        padding-left: var.$page-pad-md;
+        padding-right: var.$page-pad-md;
     }
 
     @media (min-width: var.$bp-desktop) {
@@ -32,87 +53,79 @@
     }
 }
 
-.art-panel h2,
-.illust-panel h2 {
-    font-size: 2.5rem;
-    line-height: 3rem;
-    text-align: center;
-    margin: 0 0 var.$unit-lg 0;
-}
-
-.art-panel p,
-.illust-panel p {
-    font-size: 1rem;
-    line-height: 1.3rem;
-    font-weight: 400;
-    margin: var.$unit-md 0;
-
-    @media (min-width: var.$bp-tablet) {
-        margin: var.$unit-lg 0;
-    }
-}
-
-
-
-.art-panel a,
-.illust-panel a {
-    color: #aaa;
-}
-
-.art-panel a:hover,
-.illust-panel a:hover {
-    color: #f8f8f8;
-}
-
 .art-panel,
 .illust-panel {
-    background-color: var.$grey5;
-
+    background-image: url("images/art-panel-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 180%;
     color: var.$body-text-col;
 
+    @media (min-width: var.$bp-tablet) {
+        background-size: 120%;
+    }
+
     h2 {
-        font-weight: 300;
         color: var.$darkGrey;
     }
 
     h3 {
         color: var.$darkGrey;
     }
+}
 
-    background: linear-gradient(180deg,
-        var.$panelGradient-start 30%,
-        var.$panelGradient-end 85%,
-        var.$pageBgColor 100%);
+.close-up-panel {
+    margin-top: var.$unit-lg;
 
-    @media (min-width: 1400px) {
-        background: linear-gradient(90deg, var.$pageBgColor 3%, transparent 20%, transparent 80%, var.$pageBgColor 97%),
-            linear-gradient(180deg,
-                var.$panelGradient-start 30%,
-                var.$panelGradient-end 85%,
-                var.$pageBgColor 100%)
-    }
-
-    @media (min-width: 2400px) {
-        background: linear-gradient(90deg, var.$pageBgColor 10%, transparent 30%, transparent 70%, var.$pageBgColor 90%),
-            linear-gradient(180deg,
-                var.$panelGradient-start 30%,
-                var.$panelGradient-end 85%,
-                var.$pageBgColor 100%)
+    @media (min-width: var.$bp-tablet) {
+        margin-top: var.$unit-xl;
     }
 }
 
 
-.section-divide {
-    margin: 50px 0 80px 20%;
-    // height: 3px;
-    // background: rgb(226, 243, 247);
-    // background: linear-gradient(
-    //   90deg,
-    //   rgba(226, 243, 247, 0) 2%,
-    //   rgba(89, 102, 106, 1) 50%,
-    //   rgba(226, 243, 247, 0) 98%
-    // );
-    clear: both;
-    width: 60%;
-    position: relative;
+
+.art-panel-aside {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var.$unit-rg;
+    margin: var.$unit-md auto var.$unit-lg auto;
+    transition: width var.$ani-md ease-in-out;
+
+    .aside-client,
+    .aside-forSale {
+        grid-column: 1 / -1;
+    }
+
+    .aside-forSale {
+        text-align: right;
+    }
+
+    .aside-dimensions {
+        text-align: right;
+    }
+
+    p {
+        // art details under the artwork image
+        font-size: 1rem;
+        line-height: 1.3rem;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    @media (min-width: var.$bp-tablet) {
+    padding: 0 var.$unit-md ;
+        width: 550px;
+    }
+
+    @media (min-width: var.$bp-desktop) {
+        width: 640px;
+    }
+
+    @media (min-width: var.$bp-xl) {
+        width: 720px;
+    }
+
+    @media (min-width: var.$bp-xxl) {
+        width: 820px;
+    }
 }

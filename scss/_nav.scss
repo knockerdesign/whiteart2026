@@ -78,6 +78,8 @@
             transition: background-color 0.2s ease, color 0.2s ease;
             background-color: var.$navButtonMob;
             margin-bottom: 1px;
+            text-decoration: none;
+
 
             &:hover {
                 background-color: var.$col-grey-55;

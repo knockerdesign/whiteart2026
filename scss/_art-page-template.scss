@@ -1,29 +1,12 @@
 @use "vars.scss" as var;
 
-body {
-    background-color: var.$pageBgColor;
-    padding-top: 30px;
-}
-
-@media (min-width: var.$bp-tablet) {
-    body {
-        padding-top: 0;
-    }
-}
-
-.whiteArtPage {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-}
-
 
 .art-container {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
     padding-left: var.$page-pad-sm;
-    padding-right:  var.$page-pad-sm;
+    padding-right: var.$page-pad-sm;
     transition: width var.$ani-md ease-in-out;
 
     &:has(.large) {
@@ -32,19 +15,21 @@ body {
 
     @media (min-width: var.$bp-tablet) {
         width: 550px;
-    &:has(.large) {
 
-        padding-left: var.$page-pad-md;
-        padding-right:  var.$page-pad-md;
-    }
+        &:has(.large) {
+
+            padding-left: var.$page-pad-md;
+            padding-right: var.$page-pad-md;
+        }
     }
 
     @media (min-width: var.$bp-desktop) {
         width: 640px;
-    &:has(.large) {
-        padding-left: var.$page-pad-lg;
-        padding-right:  var.$page-pad-lg;
-    }
+
+        &:has(.large) {
+            padding-left: var.$page-pad-lg;
+            padding-right: var.$page-pad-lg;
+        }
     }
 
     @media (min-width: var.$bp-xl) {
