@@ -1,5 +1,6 @@
 @use "sass:math";
 @use "vars.scss" as var;
+@use "fonts.scss" as font;
 
 
 .hero {
@@ -105,15 +106,15 @@
     background-position: center -60px;
 }
 
-.hero-image--coastal {
-    background-image: url(images/galleries/gallery-imgs-coastal-hover.jpg);
+.hero-image--sea {
+    background-image: url(images/galleries/gallery-imgs-sea-hover.jpg);
 }
 
 .hero-image--land {
     background-image: url(images/galleries/gallery-imgs-land-hover.jpg);
 }
 
-.hero-image--land {
+.hero-image--illust {
     background-image: url(images/galleries/gallery-imgs-illust-hover.jpg);
 }
 

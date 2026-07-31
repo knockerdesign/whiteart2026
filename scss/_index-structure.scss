@@ -1,4 +1,5 @@
 @use "vars.scss" as var;
+@use "fonts.scss" as font;
 
 // ── Top-level flow: order changes at the tablet breakpoint ──
 .index-site-grid {
@@ -66,14 +67,3 @@
     }
 }
 
-.hero-image {
-    grid-area: heroImage;
-}
-
-.galleries {
-    grid-area: galleries;
-}
-
-.about {
-    grid-area: about;
-}

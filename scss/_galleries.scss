@@ -1,4 +1,5 @@
 @use "vars.scss" as var;
+@use "fonts.scss" as font;
 @use "sass:color";
 
 .galleries {
@@ -197,11 +198,11 @@
     }
 }
 
-.gallery-card-img--coastal {
-    background-image: url("images/galleries/gallery-imgs-coast-hover.jpg");
+.gallery-card-img--sea {
+    background-image: url("images/galleries/gallery-imgs-sea-hover.jpg");
 
     &:before {
-        background-image: url("images/galleries/gallery-imgs-coast.jpg");
+        background-image: url("images/galleries/gallery-imgs-sea.jpg");
     }
 }
 

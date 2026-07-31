@@ -16,6 +16,30 @@ navLinks.querySelectorAll('a').forEach(function(link) {
     });
 });
 
+document.querySelectorAll('.forSale-btn').forEach(function(el) {
+  el.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+
+    // Pre-fill message with painting title
+    var section = el.closest('section');
+    if (section) {
+      var h2 = section.querySelector('h2');
+      if (h2) {
+        var title = h2.textContent.trim();
+        document.getElementById('cf-message').value = 'Regarding the ' + title + ' painting or print.\n\nPlease add your message here...';
+      }
+    }
+
+    var sheet = document.getElementById('contactOverlay');
+    if (sheet.classList.contains('is-open')) {
+      closeContact();
+    } else {
+      openContact();
+    }
+  }, true);
+});
+
 // ── Contact modal ──────────────────────────────────────────
 var overlay = document.getElementById('contactOverlay');
 var openBtn = document.getElementById('contactOpenBtn');

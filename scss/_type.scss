@@ -1,17 +1,16 @@
 @use "vars.scss" as var;
+@use "fonts.scss" as font;
 
-
-
-
+ 
 body {
-    font-family: "Open Sans", sans-serif;
-    // font-size: 1rem;
+  font-family: font.$font-family-base;
+  font-weight: font.$font-light;
     color: var.$body-text-col;
 }
 
 
 h1 {
-    font-weight: 300;
+    // font-weight: font.$font-light;
     font-size: 4.5rem;
     text-align: left;
     letter-spacing: 0.55rem;
@@ -40,6 +39,7 @@ h2 {
 
     @media screen and (min-width: var.$bp-tablet) {
         font-size: 3.75rem;
+        line-height: 4.2rem;
     }
 
     +p {
@@ -85,7 +85,9 @@ h3 {
 
 a,
 li,
-p {
+p,
+figcaption,
+button {
     font-size: var.$font-size-body;
     line-height: var.$line-height-body;
 }
@@ -93,9 +95,12 @@ p {
     max-width: var.$text-max-width
 }
 
+button  {
+    font-weight: font.$font-medium;
+}
 
 h2.standardHeading {
-    font-weight: 300;
+    font-weight: font.$font-light;
     margin: 2rem 0 1rem 0;
     color: rgba(var.$darkGrey, 0.72);
 
@@ -131,26 +136,10 @@ a:focus {
     outline-offset: -2px;
 }
 
-
-span.forSale,
-a.forSaleLink,
-.buyPrints-link,
-.buyPrints-link:active,
-.buyPrints-link:visited {
-    display: inline-block;
-    text-decoration: none;
-    padding: 8px 12px;
-    border: 1px solid var.$forSale;
-    color: var.$forSale;
-    margin: var.$unit-sm 0 0 var.$unit-md;
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-
-    &:hover {
-        cursor: pointer;
-        background-color: rgba(11, 212, 11, 0.5);
-        color: var.$forSale;
-    }
+.ship-name {
+    font-style: italic;
 }
+
 
 .buyPrints-link {
     border-left: none;
@@ -168,7 +157,7 @@ span.sold {
 }
 
 .text-semibold {
-    font-weight: 500;
+    font-weight: font.$font-medium;
 }
 
 .align-center {

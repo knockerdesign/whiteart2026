@@ -1,4 +1,5 @@
 @use "vars.scss" as var;
+@use "fonts.scss" as font;
 
 @use "sass:color";
 
@@ -82,11 +83,16 @@
     }
 }
 
-
+.art-panel--heading {
+    text-align: center;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .art-panel-aside {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: var.$unit-rg;
     margin: var.$unit-md auto var.$unit-lg auto;
     transition: width var.$ani-md ease-in-out;
@@ -104,15 +110,31 @@
         text-align: right;
     }
 
-    p {
+    &:has(.aside-client + .aside-sold) {
+        .aside-client {
+            grid-column: 1 / 2;
+            text-align: left;
+        }
+        .aside-sold {
+            grid-column: 2 / -1;
+            text-align: right;
+        }
+    }
+
+    p, a:not(.forSaleLink) {
         // art details under the artwork image
         font-size: 1rem;
         line-height: 1.3rem;
         font-weight: 400;
         margin: 0;
     }
+    a { // for sale link to redbubble
+        font-weight: font.$font-medium;
+    }
 
     @media (min-width: var.$bp-tablet) {
+    grid-template-columns: 2fr 1fr;
+
     padding: 0 var.$unit-md ;
         width: 550px;
     }
@@ -127,5 +149,12 @@
 
     @media (min-width: var.$bp-xxl) {
         width: 820px;
+    }
+}
+
+.read-more-detail {
+    display: none;
+    &.open {
+        display: block;
     }
 }

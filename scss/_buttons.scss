@@ -1,0 +1,33 @@
+@use "vars.scss" as var;
+@use "fonts.scss" as font;
+
+
+a.forSaleLink {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid var.$forSale;
+    color: var.$forSale;
+    margin: var.$unit-sm 0 0 var.$unit-md;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(11, 212, 11, 0.5);
+        color: var.$forSale;
+    }
+}
+
+.forSale-btn {
+    padding: 8px 12px;
+    border: 1px solid var.$forSale;
+    color: var.$forSale;
+    margin: var.$unit-sm 0 0 var.$unit-md;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(11, 212, 11, 0.5);
+        color: var.$forSale;
+    }
+}

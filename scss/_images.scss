@@ -1,12 +1,17 @@
 @use "vars.scss" as var;
+@use "fonts.scss" as font;
 
 
 .gallery-image-thumb {
     width: 96%;
     height: auto;
-    margin: 0 2%;
+    margin: 0 auto;
     background-image: url(images/paint-loader-art.gif);
     background-repeat: no-repeat;
+
+    background-size: 6%;
+    background-position: center;
+    width: 100%;
     display: block;
     transition: max-height 0.5s ease-in-out, width 0.5s ease-in-out,
         border-left-width 0.5s ease-in-out, border-right-width 0.5s ease-in-out,
@@ -25,8 +30,10 @@
         border-right-width: 19px;
         border-bottom-width: 25px;
         border-left-width: 19px;
+        width: 100%;
     }
 }
+
 
 .sketch-section {
     img {
@@ -46,47 +53,12 @@
     filter: drop-shadow(0 0 0);
 }
 
-.art-panel,
-.illust-panel {
-    img:last-of-type {
-        margin-bottom: 0;
-    }
-}
-
 .gallery-image-thumb:hover {
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
 }
 
-.gallery-image-thumb.large:hover {
-    cursor: default;
-}
 
-.gallery-image-thumb.large+aside {
-    margin-right: 15px;
-
-    @media screen and (min-width: 530px) {
-        margin-right: 0;
-    }
-}
-
-.gallery-image-thumb.portrait-img {
-    max-height: 350px;
-    height: auto;
-}
-
-
-.gallery-image-thumb {
-    background-size: 6%;
-    background-position: center;
-    width: 100%;
-    margin: 0 auto;
-
-
-    &.large {
-        width: 100%;
-    }
-}
 
 .gallery-image-thumb.large.portrait-img {
     width: auto;
@@ -107,9 +79,11 @@ a img.staticBanner {
 
 
 
-aside.sketches {
+.sketch-card {
+    margin: 0;
+}
+
+.sketch-card figcaption {
     text-align: center;
-    padding-bottom: var.$unit-md;
-    float: none;
-    margin-right: auto;
+    padding: var.$unit-md 0;
 }

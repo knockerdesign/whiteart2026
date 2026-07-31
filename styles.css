@@ -1,3 +1,36 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Light.woff2") format("woff2"), url("fonts/OpenSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Regular.woff2") format("woff2"), url("fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Medium.woff2") format("woff2"), url("fonts/OpenSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+.fw-light {
+  font-weight: 300;
+}
+
+.fw-regular {
+  font-weight: 400;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
 *,
 *::before,
 *::after {
@@ -104,25 +137,13 @@ p {
   }
 }
 
-.hero-image {
-  grid-area: heroImage;
-}
-
-.galleries {
-  grid-area: galleries;
-}
-
-.about {
-  grid-area: about;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
+  font-weight: 300;
   color: #222;
 }
 
 h1 {
-  font-weight: 300;
   font-size: 4.5rem;
   text-align: left;
   letter-spacing: 0.55rem;
@@ -146,6 +167,7 @@ h2 {
 @media screen and (min-width: 780px) {
   h2 {
     font-size: 3.75rem;
+    line-height: 4.2rem;
   }
 }
 h2 + p {
@@ -187,13 +209,19 @@ h3 {
 
 a,
 li,
-p {
+p,
+figcaption,
+button {
   font-size: clamp(1.125rem, 1.0833rem + 0.208vw, 1.25rem);
   line-height: clamp(1.65rem, 1.575rem + 0.375vw, 1.875rem);
 }
 
 p {
   max-width: 970px;
+}
+
+button {
+  font-weight: 500;
 }
 
 h2.standardHeading {
@@ -231,27 +259,8 @@ a:focus {
   outline-offset: -2px;
 }
 
-span.forSale,
-a.forSaleLink,
-.buyPrints-link,
-.buyPrints-link:active,
-.buyPrints-link:visited {
-  display: inline-block;
-  text-decoration: none;
-  padding: 8px 12px;
-  border: 1px solid #022802;
-  color: #022802;
-  margin: 8px 0 0 24px;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
-span.forSale:hover,
-a.forSaleLink:hover,
-.buyPrints-link:hover,
-.buyPrints-link:active:hover,
-.buyPrints-link:visited:hover {
-  cursor: pointer;
-  background-color: rgba(11, 212, 11, 0.5);
-  color: #022802;
+.ship-name {
+  font-style: italic;
 }
 
 .buyPrints-link {
@@ -274,6 +283,34 @@ span.sold {
 
 .align-center {
   text-align: center;
+}
+
+a.forSaleLink {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid #022802;
+  color: #022802;
+  margin: 8px 0 0 24px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+a.forSaleLink:hover {
+  cursor: pointer;
+  background-color: rgba(11, 212, 11, 0.5);
+  color: #022802;
+}
+
+.forSale-btn {
+  padding: 8px 12px;
+  border: 1px solid #022802;
+  color: #022802;
+  margin: 8px 0 0 24px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.forSale-btn:hover {
+  cursor: pointer;
+  background-color: rgba(11, 212, 11, 0.5);
+  color: #022802;
 }
 
 .site-nav {
@@ -553,15 +590,15 @@ span.sold {
   background-position: center -60px;
 }
 
-.hero-image--coastal {
-  background-image: url(images/galleries/gallery-imgs-coastal-hover.jpg);
+.hero-image--sea {
+  background-image: url(images/galleries/gallery-imgs-sea-hover.jpg);
 }
 
 .hero-image--land {
   background-image: url(images/galleries/gallery-imgs-land-hover.jpg);
 }
 
-.hero-image--land {
+.hero-image--illust {
   background-image: url(images/galleries/gallery-imgs-illust-hover.jpg);
 }
 
@@ -786,11 +823,11 @@ span.sold {
   }
 }
 
-.gallery-card-img--coastal {
-  background-image: url("images/galleries/gallery-imgs-coast-hover.jpg");
+.gallery-card-img--sea {
+  background-image: url("images/galleries/gallery-imgs-sea-hover.jpg");
 }
-.gallery-card-img--coastal:before {
-  background-image: url("images/galleries/gallery-imgs-coast.jpg");
+.gallery-card-img--sea:before {
+  background-image: url("images/galleries/gallery-imgs-sea.jpg");
 }
 
 .gallery-card-img--navy {
@@ -901,9 +938,16 @@ span.sold {
   }
 }
 
+.art-panel--heading {
+  text-align: center;
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .art-panel-aside {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 16px;
   margin: 24px auto 48px auto;
   transition: width 1s ease-in-out;
@@ -918,14 +962,26 @@ span.sold {
 .art-panel-aside .aside-dimensions {
   text-align: right;
 }
-.art-panel-aside p {
+.art-panel-aside:has(.aside-client + .aside-sold) .aside-client {
+  grid-column: 1/2;
+  text-align: left;
+}
+.art-panel-aside:has(.aside-client + .aside-sold) .aside-sold {
+  grid-column: 2/-1;
+  text-align: right;
+}
+.art-panel-aside p, .art-panel-aside a:not(.forSaleLink) {
   font-size: 1rem;
   line-height: 1.3rem;
   font-weight: 400;
   margin: 0;
 }
+.art-panel-aside a {
+  font-weight: 500;
+}
 @media (min-width: 780px) {
   .art-panel-aside {
+    grid-template-columns: 2fr 1fr;
     padding: 0 24px;
     width: 550px;
   }
@@ -944,6 +1000,13 @@ span.sold {
   .art-panel-aside {
     width: 820px;
   }
+}
+
+.read-more-detail {
+  display: none;
+}
+.read-more-detail.open {
+  display: block;
 }
 
 .art-container {
@@ -1022,9 +1085,12 @@ span.sold {
 .gallery-image-thumb {
   width: 96%;
   height: auto;
-  margin: 0 2%;
+  margin: 0 auto;
   background-image: url(images/paint-loader-art.gif);
   background-repeat: no-repeat;
+  background-size: 6%;
+  background-position: center;
+  width: 100%;
   display: block;
   transition: max-height 0.5s ease-in-out, width 0.5s ease-in-out, border-left-width 0.5s ease-in-out, border-right-width 0.5s ease-in-out, border-top-width 0.5s ease-in-out, border-bottom-width 0.5s ease-in-out;
   border-color: #e0e0e0;
@@ -1040,6 +1106,7 @@ span.sold {
   border-right-width: 19px;
   border-bottom-width: 25px;
   border-left-width: 19px;
+  width: 100%;
 }
 
 .sketch-section img {
@@ -1058,42 +1125,9 @@ span.sold {
   filter: drop-shadow(0 0 0);
 }
 
-.art-panel img:last-of-type,
-.illust-panel img:last-of-type {
-  margin-bottom: 0;
-}
-
 .gallery-image-thumb:hover {
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
-}
-
-.gallery-image-thumb.large:hover {
-  cursor: default;
-}
-
-.gallery-image-thumb.large + aside {
-  margin-right: 15px;
-}
-@media screen and (min-width: 530px) {
-  .gallery-image-thumb.large + aside {
-    margin-right: 0;
-  }
-}
-
-.gallery-image-thumb.portrait-img {
-  max-height: 350px;
-  height: auto;
-}
-
-.gallery-image-thumb {
-  background-size: 6%;
-  background-position: center;
-  width: 100%;
-  margin: 0 auto;
-}
-.gallery-image-thumb.large {
-  width: 100%;
 }
 
 .gallery-image-thumb.large.portrait-img {
@@ -1111,11 +1145,13 @@ a img.staticBanner:hover {
   cursor: pointer;
 }
 
-aside.sketches {
+.sketch-card {
+  margin: 0;
+}
+
+.sketch-card figcaption {
   text-align: center;
-  padding-bottom: 24px;
-  float: none;
-  margin-right: auto;
+  padding: 24px 0;
 }
 
 .about {
