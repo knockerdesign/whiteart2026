@@ -3,29 +3,19 @@
 
 
 a.forSaleLink {
-    display: inline-block;
     text-decoration: none;
-    font-weight: font.$font-md;
-    padding: 8px 12px;
-    border: 1px solid var.$forSale-border;
-    background-color: var.$forSale-bg;
-    color: var.$forSale-text;
-    margin: var.$unit-sm 0 0 var.$unit-md;
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
-    &:hover {
-        cursor: pointer;
-        background-color: var.$forSale-hover;
-        color: var.$white;
-    }
 }
 
-.forSale-btn {
+.forSale-btn,
+a.forSaleLink {
     padding: var.$unit-xs var.$unit-rg;
     border: 1px solid var.$forSale-border;
     border-radius: var.$border-radius-sm;
     color: var.$forSale-text;
     background-color: var.$forSale-bg;
+    font-size: 1rem;
+    font-weight: font.$font-bold;
     // margin: var.$unit-sm 0 0 var.$unit-md;
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 
@@ -33,5 +23,11 @@ a.forSaleLink {
         cursor: pointer;
         background-color: var.$forSale-hover;
         color: var.$forSale-text;
+    }
+
+    @media (min-width: var.$bp-nav) {
+        font-size: inherit;
+        font-weight: font.$font-md;
+
     }
 }

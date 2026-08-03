@@ -293,34 +293,32 @@ span.sold {
 }
 
 a.forSaleLink {
-  display: inline-block;
   text-decoration: none;
-  font-weight: 500;
-  padding: 8px 12px;
-  border: 1px solid #005b00;
-  background-color: #01ae23;
-  color: #fff;
-  margin: 8px 0 0 24px;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
-a.forSaleLink:hover {
-  cursor: pointer;
-  background-color: #019a1f;
-  color: #fff;
 }
 
-.forSale-btn {
+.forSale-btn,
+a.forSaleLink {
   padding: 4px 16px;
   border: 1px solid #005b00;
   border-radius: 5px;
   color: #fff;
   background-color: #01ae23;
+  font-size: 1rem;
+  font-weight: 700;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
-.forSale-btn:hover {
+.forSale-btn:hover,
+a.forSaleLink:hover {
   cursor: pointer;
-  background-color: #019a1f;
+  background-color: #00730c;
   color: #fff;
+}
+@media (min-width: 940px) {
+  .forSale-btn,
+  a.forSaleLink {
+    font-size: inherit;
+    font-weight: 500;
+  }
 }
 
 .site-nav {
@@ -469,7 +467,7 @@ a.forSaleLink:hover {
   }
 }
 .btn-contact:hover {
-  background: #019a1f;
+  background: #00730c;
 }
 
 .btn-facebook {
@@ -482,6 +480,9 @@ a.forSaleLink:hover {
   align-items: center;
   width: 54px;
   height: 100%;
+}
+.btn-facebook:hover {
+  background-color: #034cac;
 }
 .btn-facebook svg {
   width: 34px;
@@ -1066,7 +1067,8 @@ a.forSaleLink:hover {
   margin: 24px auto 48px auto;
   transition: width 1s ease-in-out;
 }
-.art-panel-aside p, .art-panel-aside a:not(.forSaleLink) {
+.art-panel-aside p,
+.art-panel-aside a:not(.forSaleLink) {
   font-size: 1rem;
   line-height: 1.3rem;
   font-weight: 400;
@@ -1101,8 +1103,16 @@ a.forSaleLink:hover {
   }
 }
 
-.aside-forSale button + button {
-  margin-left: 24px;
+.aside-forSale {
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+@media (min-width: 580px) {
+  .aside-forSale {
+    justify-content: flex-start;
+  }
 }
 
 .read-more-detail {
@@ -1314,7 +1324,6 @@ a img.staticBanner:hover {
 .contact-overlay {
   position: fixed;
   bottom: 0;
-  right: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1331,23 +1340,38 @@ a img.staticBanner:hover {
 .contact-overlay.is-open .contact-modal {
   transform: translateY(0);
 }
+@media (min-width: 580px) {
+  .contact-overlay {
+    right: 8px;
+  }
+}
 
 .contact-modal {
   background: #fff;
   box-shadow: 2px 2px 11px 0 rgba(0, 0, 0, 0.5), 1px 1px 22px 0 rgba(0, 0, 0, 0.5);
   width: 100%;
-  max-width: 420px;
+  max-width: 620px;
   padding: 36px 32px 32px;
   position: relative;
   transform: translateY(16px);
   transition: transform 0.25s ease;
 }
 .contact-modal h2 {
-  margin: 16px 0 48px;
+  margin: 8px 0 16px;
+}
+@media (min-width: 580px) {
+  .contact-modal h2 {
+    margin: 16px 0 48px;
+  }
 }
 
 .modal-subtitle {
-  margin: 24px 0;
+  margin: 16px 0;
+}
+@media (min-width: 580px) {
+  .modal-subtitle {
+    margin: 24px 0;
+  }
 }
 
 .modal-close {
@@ -1417,7 +1441,7 @@ a img.staticBanner:hover {
   transition: background 0.2s ease;
 }
 .modal-submit:hover {
-  background: #019a1f;
+  background: #00730c;
 }
 .modal-submit:disabled {
   opacity: 0.7;

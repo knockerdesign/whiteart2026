@@ -2,56 +2,63 @@
 
 // Self-hosted Open Sans — weights 300, 400, 500
 // Place the .woff2/.woff files in /fonts (adjust $font-path if different)
- 
+
 $font-path: 'fonts';
- 
+
 @font-face {
-  font-family: 'Open Sans';
-  src: url('#{$font-path}/OpenSans-Light.woff2') format('woff2'),
-       url('#{$font-path}/OpenSans-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
- 
-@font-face {
-  font-family: 'Open Sans';
-  src: url('#{$font-path}/OpenSans-Regular.woff2') format('woff2'),
-       url('#{$font-path}/OpenSans-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
- 
-@font-face {
-  font-family: 'Open Sans';
-  src: url('#{$font-path}/OpenSans-Medium.woff2') format('woff2'),
-       url('#{$font-path}/OpenSans-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Open Sans';
+    src: url('#{$font-path}/OpenSans-Light.woff2') format('woff2'),
+    url('#{$font-path}/OpenSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('#{$font-path}/OpenSans-Bold.woff2') format('woff2'),
-       url('#{$font-path}/OpenSans-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Open Sans';
+    src: url('#{$font-path}/OpenSans-Regular.woff2') format('woff2'),
+    url('#{$font-path}/OpenSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
- 
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('#{$font-path}/OpenSans-Medium.woff2') format('woff2'),
+    url('#{$font-path}/OpenSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('#{$font-path}/OpenSans-Bold.woff2') format('woff2'),
+    url('#{$font-path}/OpenSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 // Font variables
 $font-family-base: 'Open Sans', sans-serif;
- 
+
 $font-light: 300;
 $font-rg: 400;
 $font-md: 500;
 $font-bold: 700;
- 
+
 
 // Optional utility classes
-.fw-light   { font-weight: $font-light; }
-.fw-regular { font-weight: $font-rg; }
-.fw-medium  { font-weight: $font-md; }
+.fw-light {
+    font-weight: $font-light;
+}
 
+.fw-regular {
+    font-weight: $font-rg;
+}
+
+.fw-medium {
+    font-weight: $font-md;
+}

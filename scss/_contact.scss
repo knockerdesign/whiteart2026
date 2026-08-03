@@ -5,7 +5,6 @@
 .contact-overlay {
     position: fixed;
     bottom: 0;
-    right: var.$unit-lg;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,26 +22,40 @@
             transform: translateY(0);
         }
     }
+
+    @media (min-width: var.$bp-sm) {
+        right: var.$unit-sm;
+
+    }
 }
 
 .contact-modal {
     background: var.$white;
     box-shadow: 2px 2px 11px 0 rgba(0, 0, 0, 0.5), 1px 1px 22px 0 rgba(0, 0, 0, 0.5);
-
     width: 100%;
-    max-width: 420px;
+    max-width: 620px;
     padding: 36px 32px 32px;
     position: relative;
     transform: translateY(16px);
     transition: transform 0.25s ease;
 
     h2 {
-        margin: var.$unit-rg 0 var.$unit-lg;
+        margin: var.$unit-sm 0 var.$unit-rg;
+
+        @media (min-width: var.$bp-sm) {
+            margin: var.$unit-rg 0 var.$unit-lg;
+
+        }
     }
 }
 
 .modal-subtitle {
-    margin: var.$unit-md 0;
+    margin: var.$unit-rg 0;
+
+    @media (min-width: var.$bp-sm) {
+        margin: var.$unit-md 0;
+
+    }
 }
 
 .modal-close {

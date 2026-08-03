@@ -21,17 +21,21 @@
     @media (min-width: var.$bp-tablet) {
         padding: var.$unit-rg var.$unit-md var.$unit-sm var.$unit-md;
     }
+
     @media (min-width: var.$bp-desktop) {
         grid-template-columns: 1fr 8fr;
 
     }
+
     @media (min-width: 1350px) {
         grid-template-columns: 1fr 10fr;
 
     }
+
     @media (min-width: var.$bp-xl) {
         padding: var.$unit-rg var.$unit-lg;
     }
+
     @media (min-width: var.$bp-xxl) {
         padding: var.$unit-rg var.$unit-xl;
     }
@@ -45,6 +49,7 @@
     text-transform: uppercase;
     color: var.$col-grey-55;
     margin-bottom: var.$unit-sm;
+
     @media (min-width: var.$bp-desktop) {
         margin-top: 6px; // magic number to vertially center the label with the jump menu links.  The label is a bit taller than the links, so this is a hack to make it look better.
     }
@@ -95,5 +100,5 @@
         border-color: var.$nav-active-bg;
         color: var.$white;
         font-weight: font.$font-md;
-    }   
+    }
 }

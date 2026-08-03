@@ -167,6 +167,10 @@
     width: 54px;
     height: 100%;
 
+    &:hover {
+        background-color: var.$fb-blue-hover;
+    }
+
     svg {
         width: 34px;
         fill: var.$white;

@@ -35,9 +35,14 @@ $panelGradient-end: rgb(226, 234, 238);
 
 
 $accent-green: #01ae23;
-$accent-green-hover: #019a1f;
+$accent-green-hover: #00730c;
 $fb-blue: #1877f2;
+$fb-blue-hover: #034cac;
 
+$link: #1b67a9;
+$link-underline: #5da4e1;
+$link-underline-hover: $link;
+$link-hover: #0e3b62;
 
 $forSale-text: #fff;
 $forSale-bg: $accent-green;
@@ -45,10 +50,6 @@ $forSale-hover: $accent-green-hover;
 $forSale-border: #005b00;
 $sold: #ff0000;
 
-$link: #1b67a9;
-$link-underline: #5da4e1;
-$link-underline-hover: $link;
-$link-hover: #0e3b62;
 
 $galleries-bg: $col-grey-blue;
 $gallery-label: #2c3236;

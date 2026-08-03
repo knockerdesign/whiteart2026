@@ -21,13 +21,22 @@ document.querySelectorAll('.forSale-btn').forEach(function(el) {
     e.preventDefault();
     e.stopImmediatePropagation();
 
-    // Pre-fill message with painting title
+    // Pre-fill message with painting title and item type (original vs print)
     var section = el.closest('section');
     if (section) {
       var h2 = section.querySelector('h2');
       if (h2) {
-        var title = h2.textContent.trim();
-        document.getElementById('cf-message').value = 'Regarding the ' + title + ' painting or print.\n\nPlease add your message here...';
+        var h2Clone = h2.cloneNode(true);
+        var shipNameEl = h2Clone.querySelector('.heading-ship-name');
+        if (shipNameEl) shipNameEl.remove();
+        var title = h2Clone.textContent.trim();
+
+        var buttonText = el.textContent.trim().toLowerCase();
+        var itemType = buttonText.indexOf('print') !== -1 ? 'print' :
+          buttonText.indexOf('original') !== -1 ? 'painting' :
+          'painting or print';
+
+        document.getElementById('cf-message').value = 'Regarding the ' + title + ' ' + itemType + '.\n\nPlease add your message here...';
       }
     }
 
