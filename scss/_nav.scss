@@ -13,7 +13,7 @@
     align-items: stretch;
     flex-wrap: wrap;
 
-    @media (min-width: var.$bp-tablet) {
+    @media (min-width: var.$bp-nav) {
 
         border-top: 1px solid var.$col-grey-50;
         border-bottom: 1px solid var.$col-grey-50;
@@ -32,7 +32,7 @@
     cursor: pointer;
     order: 1;
 
-    @media (min-width: var.$bp-tablet) {
+    @media (min-width: var.$bp-nav) {
         display: none;
     }
 }
@@ -55,7 +55,7 @@
         max-height: 400px;
     }
 
-    @media (min-width: var.$bp-tablet) {
+    @media (min-width: var.$bp-nav) {
         flex-direction: row;
         max-height: none;
         overflow: visible;
@@ -86,12 +86,12 @@
                 background-color: var.$col-grey-55;
             }
 
-            @media (min-width: var.$bp-tablet) {
+            @media (min-width: var.$bp-nav) {
                 color: var.$nav-text;
                 font-size: var.$nav-txt-size;
                 font-weight: var.$nav-txt-weight;
                 letter-spacing: var.$nav-txt-spacing;
-                padding: var.$unit-sm var.$unit-rg;
+                padding: var.$unit-sm var.$unit-sm;
                 height: 100%;
                 width: 100%;
                 background-color: var.$nav-bg;
@@ -127,7 +127,7 @@
     padding: 0;
     order: 2;
 
-    @media (min-width: var.$bp-tablet) {
+    @media (min-width: var.$bp-nav) {
         order: 3;
         padding: 0;
     }
@@ -146,7 +146,7 @@
     cursor: pointer;
     transition: background 0.2s ease;
 
-    @media (min-width: var.$bp-tablet) {
+    @media (min-width: var.$bp-nav) {
         height: 100%;
 
     }

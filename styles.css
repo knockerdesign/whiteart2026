@@ -19,6 +19,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-Bold.woff2") format("woff2"), url("fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 .fw-light {
   font-weight: 300;
 }
@@ -144,31 +151,25 @@ body {
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: clamp(3.2738rem, 2.3514rem + 3.9358vw, 5.5rem);
+  line-height: clamp(3.9286rem, 2.8434rem + 4.6303vw, 6.5476rem);
   text-align: left;
   letter-spacing: 0.55rem;
-  line-height: 3rem;
   margin: 0 0 30px 0;
 }
 
 @media (min-width: 600px) {
   h1 {
-    font-size: 5rem;
+    font-size: 5.5rem;
     line-height: 4rem;
     margin: 20px 0 40px 0;
   }
 }
 h2 {
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 1.7956rem + 3.0055vw, 4.2rem);
+  line-height: clamp(3rem, 2.1713rem + 3.5359vw, 5rem);
   font-weight: 300;
-  line-height: 3rem;
   margin: 0 0 48px 0;
-}
-@media screen and (min-width: 780px) {
-  h2 {
-    font-size: 3.75rem;
-    line-height: 4.2rem;
-  }
 }
 h2 + p {
   margin-top: 48px;
@@ -263,6 +264,12 @@ a:focus {
   font-style: italic;
 }
 
+.heading-ship-name {
+  display: block;
+  font-size: clamp(1.75rem, 1.4807rem + 1.1492vw, 2.4rem);
+  margin-top: 8px;
+}
+
 .buyPrints-link {
   border-left: none;
 }
@@ -288,29 +295,32 @@ span.sold {
 a.forSaleLink {
   display: inline-block;
   text-decoration: none;
+  font-weight: 500;
   padding: 8px 12px;
-  border: 1px solid #022802;
-  color: #022802;
+  border: 1px solid #005b00;
+  background-color: #01ae23;
+  color: #fff;
   margin: 8px 0 0 24px;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 a.forSaleLink:hover {
   cursor: pointer;
-  background-color: rgba(11, 212, 11, 0.5);
-  color: #022802;
+  background-color: #019a1f;
+  color: #fff;
 }
 
 .forSale-btn {
-  padding: 8px 12px;
-  border: 1px solid #022802;
-  color: #022802;
-  margin: 8px 0 0 24px;
+  padding: 4px 16px;
+  border: 1px solid #005b00;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #01ae23;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 .forSale-btn:hover {
   cursor: pointer;
-  background-color: rgba(11, 212, 11, 0.5);
-  color: #022802;
+  background-color: #019a1f;
+  color: #fff;
 }
 
 .site-nav {
@@ -325,7 +335,7 @@ a.forSaleLink:hover {
   align-items: stretch;
   flex-wrap: wrap;
 }
-@media (min-width: 780px) {
+@media (min-width: 940px) {
   .nav-inner {
     border-top: 1px solid #7B8589;
     border-bottom: 1px solid #7B8589;
@@ -344,7 +354,7 @@ a.forSaleLink:hover {
   cursor: pointer;
   order: 1;
 }
-@media (min-width: 780px) {
+@media (min-width: 940px) {
   .nav-toggle {
     display: none;
   }
@@ -366,7 +376,7 @@ a.forSaleLink:hover {
 .nav-links.is-open {
   max-height: 400px;
 }
-@media (min-width: 780px) {
+@media (min-width: 940px) {
   .nav-links {
     flex-direction: row;
     max-height: none;
@@ -396,13 +406,13 @@ a.forSaleLink:hover {
 .nav-links li a:hover {
   background-color: #757575;
 }
-@media (min-width: 780px) {
+@media (min-width: 940px) {
   .nav-links li a {
     color: #e0e0e0;
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.15rem;
-    padding: 8px 16px;
+    padding: 8px 8px;
     height: 100%;
     width: 100%;
     background-color: #342A26;
@@ -433,7 +443,7 @@ a.forSaleLink:hover {
   padding: 0;
   order: 2;
 }
-@media (min-width: 780px) {
+@media (min-width: 940px) {
   .nav-utility {
     order: 3;
     padding: 0;
@@ -453,7 +463,7 @@ a.forSaleLink:hover {
   cursor: pointer;
   transition: background 0.2s ease;
 }
-@media (min-width: 780px) {
+@media (min-width: 940px) {
   .btn-contact {
     height: 100%;
   }
@@ -485,6 +495,106 @@ a.forSaleLink:hover {
   .nav-my-name {
     display: inline;
   }
+}
+
+.jump-menu {
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 48px;
+  z-index: 90;
+  background-color: #f8f8f8;
+}
+
+.jump-menu-inner {
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 780px) {
+  .jump-menu-inner {
+    padding: 16px 24px 8px 24px;
+  }
+}
+@media (min-width: 1100px) {
+  .jump-menu-inner {
+    grid-template-columns: 1fr 8fr;
+  }
+}
+@media (min-width: 1350px) {
+  .jump-menu-inner {
+    grid-template-columns: 1fr 10fr;
+  }
+}
+@media (min-width: 1400px) {
+  .jump-menu-inner {
+    padding: 16px 48px;
+  }
+}
+@media (min-width: 2000px) {
+  .jump-menu-inner {
+    padding: 16px 96px;
+  }
+}
+
+.jump-menu-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #757575;
+  margin-bottom: 8px;
+}
+@media (min-width: 1100px) {
+  .jump-menu-label {
+    margin-top: 6px;
+  }
+}
+
+.jump-menu-list {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 4px 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.jump-menu-list::-webkit-scrollbar {
+  height: 4px;
+}
+.jump-menu-list::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+  border-radius: 2px;
+}
+
+.jump-menu-item {
+  flex: 0 0 auto;
+}
+
+.jump-menu-link {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 4px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 99px;
+  color: #222;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+  text-decoration: none;
+  background-color: #fff;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.jump-menu-link:hover, .jump-menu-link:focus-visible {
+  background-color: #0090C9;
+  border-color: #0090C9;
+  color: #fff;
+  font-weight: 500;
 }
 
 .hero {
@@ -945,30 +1055,16 @@ a.forSaleLink:hover {
   margin-right: auto;
 }
 
+.heading-ship-name {
+  display: block;
+}
+
 .art-panel-aside {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 8px;
   margin: 24px auto 48px auto;
   transition: width 1s ease-in-out;
-}
-.art-panel-aside .aside-client,
-.art-panel-aside .aside-forSale {
-  grid-column: 1/-1;
-}
-.art-panel-aside .aside-forSale {
-  text-align: right;
-}
-.art-panel-aside .aside-dimensions {
-  text-align: right;
-}
-.art-panel-aside:has(.aside-client + .aside-sold) .aside-client {
-  grid-column: 1/2;
-  text-align: left;
-}
-.art-panel-aside:has(.aside-client + .aside-sold) .aside-sold {
-  grid-column: 2/-1;
-  text-align: right;
 }
 .art-panel-aside p, .art-panel-aside a:not(.forSaleLink) {
   font-size: 1rem;
@@ -979,9 +1075,12 @@ a.forSaleLink:hover {
 .art-panel-aside a {
   font-weight: 500;
 }
+.art-panel:has(.large) + .article-panel .art-panel-aside {
+  width: 100%;
+  padding-left: 0;
+}
 @media (min-width: 780px) {
   .art-panel-aside {
-    grid-template-columns: 2fr 1fr;
     padding: 0 24px;
     width: 550px;
   }
@@ -1000,6 +1099,10 @@ a.forSaleLink:hover {
   .art-panel-aside {
     width: 820px;
   }
+}
+
+.aside-forSale button + button {
+  margin-left: 24px;
 }
 
 .read-more-detail {
@@ -1107,6 +1210,9 @@ a.forSaleLink:hover {
   border-bottom-width: 25px;
   border-left-width: 19px;
   width: 100%;
+}
+.gallery-image-thumb.large:hover {
+  cursor: default;
 }
 
 .sketch-section img {

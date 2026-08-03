@@ -31,17 +31,27 @@ $font-path: 'fonts';
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('#{$font-path}/OpenSans-Bold.woff2') format('woff2'),
+       url('#{$font-path}/OpenSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
  
 // Font variables
 $font-family-base: 'Open Sans', sans-serif;
  
-$font-light:   300;
-$font-regular: 400;
-$font-medium:  500;
+$font-light: 300;
+$font-rg: 400;
+$font-md: 500;
+$font-bold: 700;
  
 
 // Optional utility classes
 .fw-light   { font-weight: $font-light; }
-.fw-regular { font-weight: $font-regular; }
-.fw-medium  { font-weight: $font-medium; }
+.fw-regular { font-weight: $font-rg; }
+.fw-medium  { font-weight: $font-md; }
 

@@ -1,0 +1,99 @@
+@use "vars.scss" as var;
+@use "fonts.scss" as font;
+
+.jump-menu {
+    background-color: var.$white;
+    border-top: 1px solid var.$col-grey-10;
+    border-bottom: 1px solid var.$col-grey-10;
+    position: sticky;
+    top: var.$nav-height;
+    z-index: 90;
+    background-color: #f8f8f8;
+}
+
+.jump-menu-inner {
+    // max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 var.$page-pad-sm;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media (min-width: var.$bp-tablet) {
+        padding: var.$unit-rg var.$unit-md var.$unit-sm var.$unit-md;
+    }
+    @media (min-width: var.$bp-desktop) {
+        grid-template-columns: 1fr 8fr;
+
+    }
+    @media (min-width: 1350px) {
+        grid-template-columns: 1fr 10fr;
+
+    }
+    @media (min-width: var.$bp-xl) {
+        padding: var.$unit-rg var.$unit-lg;
+    }
+    @media (min-width: var.$bp-xxl) {
+        padding: var.$unit-rg var.$unit-xl;
+    }
+}
+
+.jump-menu-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: font.$font-bold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var.$col-grey-55;
+    margin-bottom: var.$unit-sm;
+    @media (min-width: var.$bp-desktop) {
+        margin-top: 6px; // magic number to vertially center the label with the jump menu links.  The label is a bit taller than the links, so this is a hack to make it look better.
+    }
+
+}
+
+.jump-menu-list {
+    display: flex;
+    gap: var.$unit-sm;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 var.$unit-xs 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var.$col-grey-10;
+        border-radius: 2px;
+    }
+}
+
+.jump-menu-item {
+    flex: 0 0 auto;
+}
+
+.jump-menu-link {
+    display: inline-block;
+    white-space: nowrap;
+    padding: var.$unit-xs var.$unit-rg;
+    border: 1px solid var.$col-grey-10;
+    border-radius: 99px;
+    color: var.$body-text-col;
+    font-size: 1rem;
+    font-weight: font.$font-rg;
+    margin-bottom: 16px;
+    text-decoration: none;
+    background-color: var.$white;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+    &:hover,
+    &:focus-visible {
+        background-color: var.$nav-active-bg;
+        border-color: var.$nav-active-bg;
+        color: var.$white;
+        font-weight: font.$font-md;
+    }   
+}

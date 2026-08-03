@@ -90,36 +90,17 @@
     margin-right: auto;
 }
 
+.heading-ship-name {
+    display: block;
+}
+
 .art-panel-aside {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var.$unit-rg;
+    gap: var.$unit-sm;
+    // align-items: center;
     margin: var.$unit-md auto var.$unit-lg auto;
     transition: width var.$ani-md ease-in-out;
-
-    .aside-client,
-    .aside-forSale {
-        grid-column: 1 / -1;
-    }
-
-    .aside-forSale {
-        text-align: right;
-    }
-
-    .aside-dimensions {
-        text-align: right;
-    }
-
-    &:has(.aside-client + .aside-sold) {
-        .aside-client {
-            grid-column: 1 / 2;
-            text-align: left;
-        }
-        .aside-sold {
-            grid-column: 2 / -1;
-            text-align: right;
-        }
-    }
 
     p, a:not(.forSaleLink) {
         // art details under the artwork image
@@ -129,12 +110,15 @@
         margin: 0;
     }
     a { // for sale link to redbubble
-        font-weight: font.$font-medium;
+        font-weight: font.$font-md;
+    }
+
+    .art-panel:has(.large) + .article-panel & {
+        width: 100%;
+        padding-left: 0;
     }
 
     @media (min-width: var.$bp-tablet) {
-    grid-template-columns: 2fr 1fr;
-
     padding: 0 var.$unit-md ;
         width: 550px;
     }
@@ -151,6 +135,11 @@
         width: 820px;
     }
 }
+
+.aside-forSale {
+    button + button {
+        margin-left: var.$unit-md;}
+    }
 
 .read-more-detail {
     display: none;

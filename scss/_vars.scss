@@ -25,6 +25,7 @@ $nav-hover: #d8d2c8;
 $nav-active-bg: #0090C9;
 $nav-active-text: #ffffff;
 $navButtonMob: #494240;
+$nav-height: 48px; // it's just from dev tools, not set for the nav.
 
 $body-text-col: #222;
 
@@ -32,7 +33,16 @@ $pageBgColor: #efeeed;
 $panelGradient-start: $grey5;
 $panelGradient-end: rgb(226, 234, 238);
 
-$forSale: #022802;
+
+$accent-green: #01ae23;
+$accent-green-hover: #019a1f;
+$fb-blue: #1877f2;
+
+
+$forSale-text: #fff;
+$forSale-bg: $accent-green;
+$forSale-hover: $accent-green-hover;
+$forSale-border: #005b00;
 $sold: #ff0000;
 
 $link: #1b67a9;
@@ -50,19 +60,27 @@ $gallery-card-4: #8A9BA2;
 $about-bg: #f5f4f1;
 $about-text: #2a2a2a;
 
-$accent-green: #01ae23;
-$accent-green-hover: #019a1f;
-$fb-blue: #1877f2;
-
-
 
 
 // ── Type ─────────────────────────────────────────────────
 $body-font: 'Open Sans', Helvetica, Arial, sans-serif;
 $font-size-base: 1rem;
+
+// Headings
+
+$font-size-h1: clamp(3.2738rem, 2.3514rem + 3.9358vw, 5.5rem);
+$line-height-h1: clamp(3.9286rem, 2.8434rem + 4.6303vw, 6.5476rem);
+
+$font-size-h2: clamp(2.5rem, 1.7956rem + 3.0055vw, 4.2rem);
+$line-height-h2: clamp(3rem, 2.1713rem + 3.5359vw, 5rem);
+
+
+// Body text
 $font-size-body: clamp(1.125rem, 1.0833rem + 0.208vw, 1.25rem);
 $line-height-body: clamp(1.65rem, 1.575rem + 0.375vw, 1.875rem);
 $text-max-width: 970px;
+
+
 
 $nav-txt-size: 1rem; // 18px
 $nav-txt-size-mob: 1.375rem; // 22px
@@ -75,6 +93,7 @@ $nav-txt-spacing: 0.15rem;
 $min-vw: 375px; // for clamps
 $bp-sm: 580px;
 $bp-tablet: 780px;
+$bp-nav: 940px; // illustration label is cut off below this point
 $bp-desktop: 1100px;
 $bp-xl: 1400px;
 $bp-xxl: 2000px;
@@ -99,3 +118,10 @@ $page-pad-lg: $unit-xl;
 
 $ani-sm: 0.42s;
 $ani-md: 1s;
+
+// ── Radius ─────────────────────────────────────────────────
+
+$border-radius-xs: 3px;
+$border-radius-sm: 5px;
+$border-radius-md: 9px;
+$border-radius-lg: 15px;
