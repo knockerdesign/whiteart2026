@@ -21,6 +21,12 @@
             background-image: url("images/art-panel-bg-san-paper.jpg");
         }
     }
+    &--buy-art h2 {
+        margin-top: var.$unit-lg;
+        @media (min-width: var.$bp-desktop) {
+            margin-top: var.$unit-xl;
+        }
+    }
 }
 
 .art-panel,

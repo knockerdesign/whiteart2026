@@ -45,12 +45,12 @@
         width: 840px;
     }
 
-    .hero--navy & {
+    .hero--gallery & {
         margin: var.$unit-rg 0;
     }
 }
 
-.hero--navy {
+.hero--gallery {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -84,10 +84,31 @@
             width: 300px
         }
     }
+    
+    &---illust { // fixes for a very long heading
+        .darrell-logo {
+            @media (min-width: var.$bp-tablet) and (max-width: var.$bp-desktop) {
 
-
+            width: 280px;
+            }
+        }
+        .hero-heading {
+            @media (min-width: 0) and (max-width: var.$bp-sm) {
+                letter-spacing: 0.15rem;
+            }
+            @media (min-width: var.$bp-tablet) and (max-width: var.$bp-desktop) {
+                letter-spacing: 0.2rem;
+                font-size: 4.9rem;
+            }
+            @media (min-width: var.$bp-desktop) and (max-width: var.$bp-xl) {
+                letter-spacing: 0.32rem;
+            }
+        }
+    }
 
 }
+
+
 
 .hero-image {
     display: none;
@@ -117,6 +138,11 @@
 .hero-image--illust {
     background-image: url(images/galleries/gallery-imgs-illust-hover.jpg);
 }
+.hero-image--buy-art {
+    background-image: url(images/galleries/buy-art-hero.jpg);
+}
+
+
 
 .intro-text {
     background: var.$hero-bg;
@@ -150,3 +176,4 @@
         }
     }
 }
+

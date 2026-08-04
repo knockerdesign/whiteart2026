@@ -645,11 +645,11 @@ a.forSaleLink:hover {
     width: 840px;
   }
 }
-.hero--navy .hero-copy {
+.hero--gallery .hero-copy {
   margin: 16px 0;
 }
 
-.hero--navy {
+.hero--gallery {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -660,26 +660,47 @@ a.forSaleLink:hover {
   background-color: #20130C;
   color: #fff;
 }
-.hero--navy img {
+.hero--gallery img {
   display: none;
 }
 @media (min-width: 780px) {
-  .hero--navy {
+  .hero--gallery {
     flex-direction: row-reverse;
     justify-content: space-between;
   }
-  .hero--navy img {
+  .hero--gallery img {
     display: block;
     width: 340px;
   }
 }
 @media (min-width: 1100px) {
-  .hero--navy {
+  .hero--gallery {
     padding-left: 48px;
     flex-direction: column;
   }
-  .hero--navy img {
+  .hero--gallery img {
     width: 300px;
+  }
+}
+@media (min-width: 780px) and (max-width: 1100px) {
+  .hero--gallery---illust .darrell-logo {
+    width: 280px;
+  }
+}
+@media (min-width: 0) and (max-width: 580px) {
+  .hero--gallery---illust .hero-heading {
+    letter-spacing: 0.15rem;
+  }
+}
+@media (min-width: 780px) and (max-width: 1100px) {
+  .hero--gallery---illust .hero-heading {
+    letter-spacing: 0.2rem;
+    font-size: 4.9rem;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1400px) {
+  .hero--gallery---illust .hero-heading {
+    letter-spacing: 0.32rem;
   }
 }
 
@@ -711,6 +732,10 @@ a.forSaleLink:hover {
 
 .hero-image--illust {
   background-image: url(images/galleries/gallery-imgs-illust-hover.jpg);
+}
+
+.hero-image--buy-art {
+  background-image: url(images/galleries/buy-art-hero.jpg);
 }
 
 .intro-text {
@@ -980,6 +1005,14 @@ a.forSaleLink:hover {
 }
 .art-section:first-of-type .art-panel {
   background-image: url("images/art-panel-bg-san-paper.jpg");
+}
+.art-section--buy-art h2 {
+  margin-top: 48px;
+}
+@media (min-width: 1100px) {
+  .art-section--buy-art h2 {
+    margin-top: 96px;
+  }
 }
 
 .art-panel,
@@ -1464,7 +1497,48 @@ a img.staticBanner:hover {
   background: #ACB9BF;
   color: #20130C;
   text-align: center;
+  margin-top: 48px;
   padding: 48px 0;
+}
+@media (min-width: 1100px) {
+  .site-footer {
+    margin-top: 96px;
+  }
+}
+.index-page .site-footer {
+  margin-top: 0;
+}
+
+.margin-top-sm {
+  margin-top: 8px;
+}
+
+.margin-top-md {
+  margin-top: 24px;
+}
+
+.margin-top-lg {
+  margin-top: 48px;
+}
+
+.margin-top-xl {
+  margin-top: 96px;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 8px;
+}
+
+.margin-bottom-md {
+  margin-bottom: 24px;
+}
+
+.margin-bottom-lg {
+  margin-bottom: 48px;
+}
+
+.margin-bottom-xl {
+  margin-bottom: 96px;
 }
 
 /*# sourceMappingURL=styles.css.map */

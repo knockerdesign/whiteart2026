@@ -4,8 +4,27 @@
 <head>
 
     <meta charset="utf-8">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DK9YVGPG01"></script>
+    <script>
+        //Stop GA firing when viewing the HTML locally
+        if (window.location.protocol === 'file:') {
+            console.log("Google Analytics disabled on local files.");
+        } else {
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-DK9YVGPG01');
+        }
+    </script>
+
     <title>Navy - Darrell White Fine Art</title>
-    <meta name="description" content="Darrell White fine art page for naval subjects">
+    <meta name="description" content="Darrell White fine art page for naval subjects.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500" rel="stylesheet" type="text/css">
@@ -49,7 +68,7 @@
 
     <div class="index-site-grid">
 
-        <header class="hero--navy">
+        <header class="hero--gallery">
             <img src="images/darrell-white-logo.svg" class="darrell-logo" alt="Darrell White Fine Art and Illustration logo">
             <h1 class="hero-heading">Navy</h1>
         </header>
@@ -68,7 +87,7 @@
                 <li class="jump-menu-item"><a class="jump-menu-link" href="#a-chance-for-hope">HMAS Melbourne Tracker</a></li>
                 <li class="jump-menu-item"><a class="jump-menu-link" href="#the-life-line">HMAS Adelaide</a></li>
                 <li class="jump-menu-item"><a class="jump-menu-link" href="#the-signalman">HMAS Swan</a></li>
-                <li class="jump-menu-item"><a class="jump-menu-link" href="#in-its-wake">In It's Wake</a></li>
+                <li class="jump-menu-item"><a class="jump-menu-link" href="#in-its-wake">In Its Wake</a></li>
                 <li class="jump-menu-item"><a class="jump-menu-link" href="#farewell-sydney">HMAS Sydney II</a></li>
                 <li class="jump-menu-item"><a class="jump-menu-link" href="#final-escort">HMAS Sydney II</a></li>
                 <li class="jump-menu-item"><a class="jump-menu-link" href="#no-time-for-thoughts">HMAS Sydney FFG 03</a></li>
@@ -102,7 +121,7 @@
                 <p class="aside-medium"><span class="text-semibold">Medium:</span> Acrylics on board</p>
                 <p class="aside-dimensions"><span class="text-semibold">Dimensions:</span> 56cm X 26cm</p>
             </aside>
-            <p>USS New Jersey, with her camouflage Measure 21 (Navy Blue overall with dark blue decks) and USS Hancock as part of Task Force 38 sailing off the Philippines on Nov 8, 1944, During Typhoon Cobra or Halsey's&nbsp;Typhoon.</p>
+            <p>USS New Jersey, with her camouflage Measure 21 (Navy Blue overall with dark blue decks) and USS Hancock as part of Task Force 38 sailing off the Philippines on Nov 8, 1944, during Typhoon Cobra or Halsey's&nbsp;Typhoon.</p>
             <p>
                 Typhoon Cobra, also known as the Typhoon of 1944 or Halsey's Typhoon (named after Admiral William Halsey Jr.), was the United States Navy designation for a powerful tropical cyclone that struck the United States Pacific Fleet in December 1944, during World War II. The storm sank three destroyers, killed 790 sailors, damaged 9 other warships, and swept dozens of aircraft overboard off their aircraft&nbsp;carriers.</p>
 
@@ -132,7 +151,7 @@
             </aside>
 
             <p>A group of 99 South Vietnamese refugees is assisted aboard HMAS MELBOURNE by Royal Australian Navy&nbsp;sailors.</p>
-            <p>Boats from HMAS MELBOURNE (R21) and HMAS TORRENS (DE53) ferry refugees from the stricken NGHIA HUNG adrift in the South China Sea, 21 June 1981. This group of men, women, children and infants was officially designated as&nbsp;MG99.</p>
+            <p>Boats from HMAS MELBOURNE (R21) and HMAS TORRENS (DE53) ferry refugees from the stricken NGHIA HUNG adrift in the South China Sea, 21 June 1981. This group of men, women, children and infants were officially designated as&nbsp;MG99.</p>
 
             <h3 class="align-center">Detail of HMAS MELBOURNE's Utility boat disembarking Vietnamese refugees.</h3>
         </div>
@@ -204,7 +223,7 @@
                 <p class="aside-dimensions"><span class="text-semibold">Dimensions:</span> 70cm X 40cm</p>
             </aside>
 
-            <p>'The life line' depicts the moment Tony Bullimore is sighted, emerging from his upturned yacht in the Southern Ocean, January&nbsp;1997. HMAS Adelaide's ships boat close in for the rescue.</p>
+            <p>'The life line' depicts the moment Tony Bullimore is sighted, emerging from his upturned yacht in the Southern Ocean, January&nbsp;1997. HMAS Adelaide's ship's boat close in for the rescue.</p>
 
         </div>
     </section>
@@ -234,14 +253,14 @@
                 <p>As the ship did, a mass of water burst into the air and I remember a wall of spray passing over me as I sent the signal. I often wondered what the view would have been like from Torrens. This painting is an attempt to visualise that&nbsp;moment.</p>
             </div>
             <h3>Prints available</h3>
-            <img loading="lazy" class="gallery-image-thumb no-enlarge" src="images/The-sig-print-preview-lg.jpg" alt="small image of the print of The Signalman which includes crossed Juliets and HMAS Swan crest">
+            <img loading="lazy" class="gallery-image-thumb no-enlarge margin-bottom-lg" src="images/The-sig-print-preview-lg.jpg" alt="small image of the print of The Signalman which includes crossed Juliets and HMAS Swan crest">
             <!-- <p class="margin-top-sm"><strong>Price:</strong> $270.00 AUD which includes postage within Australia or New Zealand.</p> -->
             <p><strong>Dimensions:</strong> Image is 65cm X 32.5cm plus border and title&nbsp;area.</p>
-            <p><strong>Details:</strong> 225gsm Watercolour paper, the title is accompanied with 'crossed Juliets' (Signalman's rate badge) and HMAS <span class="ship-name">Swan</span>&nbsp;crest.</p>
+            <p><strong>Details:</strong> 225gsm Watercolour paper, the title is accompanied by 'crossed Juliets' (Signalman's rate badge) and HMAS <span class="ship-name">Swan</span>&nbsp;crest.</p>
             <p>For purchases and payment options, please <a href="javascript:void(0)" class="email-link">contact the&nbsp;artist</a>.</p>
 
             <h3 class="margin-top-md">"Don't muck with the Duck" mugs</h3>
-            <a href="https://www.redbubble.com/i/mug/HMAS-Swan-mug-by-whiteart/168114135/7yqg" target="_blank"><img loading="lazy" class="gallery-image-thumb no-enlarge" src="images/duck-mug.jpg" alt="Products available with the Duck motif"></a>
+            <a href="https://www.redbubble.com/i/mug/HMAS-Swan-mug-by-whiteart/168114135/7yqg" target="_blank"><img loading="lazy" class="gallery-image-thumb no-enlarge margin-top-md margin-bottom-lg" src="images/duck-mug.jpg" alt="Products available with the Duck motif"></a>
             <p class="margin-top-sm"><a href="https://www.redbubble.com/people/whiteart/shop?asc=u" target="_blank">View range on Redbubble</a> | <a href="https://www.redbubble.com/i/mug/HMAS-Swan-mug-by-whiteart/168114135.9Q0AD" target="_blank">Standard&nbsp;mug</a></p>
 
         </div>
@@ -250,7 +269,7 @@
     <section class="art-section" id="in-its-wake">
 
         <div class="art-panel">
-            <h2 class="art-panel--heading"><span>&ldquo;</span>In It's Wake<span>&rdquo;</span></h2>
+            <h2 class="art-panel--heading"><span>&ldquo;</span>In Its Wake<span>&rdquo;</span></h2>
             <div class="art-container">
 
                 <img loading="lazy" class="gallery-image-thumb" src="images/in-its-wake.jpg" data-large-img="in-its-wake-lg.jpg" alt="The Destroyer Escort crashes through the waves">
@@ -399,7 +418,7 @@
                 <p class="aside-medium"><span class="text-semibold">Medium:</span> Graphite pencil</p>
                 <p class="aside-dimensions"><span class="text-semibold">Dimensions:</span> 42cm X 60cm</p>
             </aside>
-            <p>Collins class&nbsp;submarine escorted by two dolphins, inspiration from the submariners insignia.</p>
+            <p>Collins class&nbsp;submarine escorted by two dolphins, inspiration from the submariner's insignia.</p>
 
         </div>
     </section>
@@ -481,7 +500,7 @@
                 <p class="aside-medium"><span class="text-semibold">Medium:</span> Graphite pencil</p>
                 <p class="aside-dimensions"><span class="text-semibold">Dimensions:</span> 60cm X 42cm</p>
             </aside>
-            <p>I sent a print to the Captain of HMAS <span class="ship-name">Perth</span> when it was completed and was very surprised to get an invite to join her on her entry into the port of Fremantle on her decommissioning voyage. I climbed aboard with journalists but the notice of my presence may not have got to the welcoming officer. So I suggested I go up to the flag deck and keep the Signalmen company. I was good to see some old faces from my navy days there and enjoyed the&nbsp;spectacle.</p>
+            <p>I sent a print to the Captain of HMAS <span class="ship-name">Perth</span> when it was completed and was very surprised to get an invite to join her on her entry into the port of Fremantle on her decommissioning voyage. I climbed aboard with journalists but the notice of my presence may not have got to the welcoming officer. So I suggested I go up to the flag deck and keep the Signalmen company. It was good to see some old faces from my navy days there and enjoyed the&nbsp;spectacle.</p>
 
             <p>The following day I was allowed to set up a stand to showcase my artwork during their open&nbsp;day.</p>
 
@@ -637,8 +656,8 @@
     <div class="contact-overlay" id="contactOverlay" role="dialog" aria-modal="true" aria-label="Contact form">
         <div class="contact-modal">
             <button type="button" class="modal-close" id="contactCloseBtn" aria-label="Close">&#10005;</button>
-            <h2>Get in Touch</h2>
-            <p class="modal-subtitle">Send me a message and I'll get back to you&nbsp;soon.</p>
+            <h2 id="contact-heading">Get in Touch</h2>
+            <p id="contact-hi-msg" class="modal-subtitle">Send me a message and I'll get back to you&nbsp;soon.</p>
 
             <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
                 <input type="hidden" name="subject" value="New email from Darrell Fine Art site">

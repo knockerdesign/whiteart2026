@@ -6,5 +6,13 @@
     background: var.$col-grey-blue;
     color: var.$DarkChoc;
     text-align: center;
+    margin-top: var.$unit-lg;
     padding: var.$unit-lg 0;
+    @media (min-width: var.$bp-desktop) {
+            margin-top: var.$unit-xl;
+
+    }
+    .index-page & {
+        margin-top: 0; // index page butts up against the footer
+    }
 }

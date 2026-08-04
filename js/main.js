@@ -55,6 +55,8 @@ var openBtn = document.getElementById('contactOpenBtn');
 var closeBtn = document.getElementById('contactCloseBtn');
 var form = document.getElementById('contactForm');
 var success = document.getElementById('modalSuccess');
+var formHeading = document.getElementById('contact-heading');
+var formHiMsg = document.getElementById('contact-hi-msg');
 
 function openContact() {
     overlay.classList.add('is-open');
@@ -119,6 +121,8 @@ form.addEventListener('submit', async function(e) {
 
         if (result.success) {
             form.style.display = 'none';
+            formHeading.style.display = 'none';
+            formHiMsg.style.display = 'none';
             success.classList.add('visible');
             setTimeout(function() {
                 closeContact();
@@ -129,7 +133,7 @@ form.addEventListener('submit', async function(e) {
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Send Message';
                 }, 300);
-            }, 2500);
+            }, 3500);
         } else {
             submitBtn.disabled = false;
             submitBtn.textContent = 'Send Message';

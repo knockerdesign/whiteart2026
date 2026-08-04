@@ -1,0 +1,34 @@
+@use "vars.scss" as var;
+@use "fonts.scss" as font;
+
+.margin-top-sm {
+    margin-top: var.$unit-sm;
+}
+
+.margin-top-md {
+    margin-top: var.$unit-md;
+}
+
+.margin-top-lg {
+    margin-top: var.$unit-lg;
+}
+
+.margin-top-xl {
+    margin-top: var.$unit-xl;
+}
+
+.margin-bottom-sm {
+    margin-bottom: var.$unit-sm;
+}
+
+.margin-bottom-md {
+    margin-bottom: var.$unit-md;
+}
+
+.margin-bottom-lg {
+    margin-bottom: var.$unit-lg;
+}
+
+.margin-bottom-xl {
+    margin-bottom: var.$unit-xl;
+}
