@@ -2,7 +2,7 @@
 @use "fonts.scss" as font;
 
 // ── Top-level flow: order changes at the tablet breakpoint ──
-.index-site-grid {
+.site-grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -65,4 +65,23 @@
     @media (min-width: var.$bp-xxl) {
         padding: var.$unit-sm var.$page-pad-md var.$unit-xl var.$page-pad-lg;
     }
+}
+
+.buy-art-grid {
+    @media (max-width: var.$index-hero-shift) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "heroImage"
+            "heroTxt"
+            "galleries"
+            "about"
+            "siteFooter";
+
+        .hero-image {
+            height: 320px;
+        }
+    }
+
 }

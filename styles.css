@@ -93,39 +93,39 @@ p {
   white-space: nowrap;
 }
 
-.index-site-grid {
+.site-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas: "heroTxt" "heroImage" "galleries" "introTxt" "about" "siteFooter";
 }
-.index-site-grid .hero {
+.site-grid .hero {
   grid-area: heroTxt;
 }
-.index-site-grid .intro-text {
+.site-grid .intro-text {
   grid-area: introTxt;
   position: relative;
 }
-.index-site-grid .hero-image {
+.site-grid .hero-image {
   grid-area: heroImage;
 }
-.index-site-grid .galleries {
+.site-grid .galleries {
   grid-area: galleries;
 }
-.index-site-grid .about {
+.site-grid .about {
   grid-area: about;
 }
-.index-site-grid .site-footer {
+.site-grid .site-footer {
   grid-area: siteFooter;
 }
 @media (min-width: 1100px) {
-  .index-site-grid {
+  .site-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "heroTxt heroImage" "introTxt heroImage" "galleries galleries" "about about" "siteFooter siteFooter";
   }
 }
 @media (min-width: 2000px) {
-  .index-site-grid {
+  .site-grid {
     grid-template-columns: 3fr 4fr;
   }
 }
@@ -141,6 +141,18 @@ p {
 @media (min-width: 2000px) {
   .intro-text {
     padding: 8px 48px 96px 96px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .buy-art-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "heroImage" "heroTxt" "galleries" "about" "siteFooter";
+  }
+  .buy-art-grid .hero-image {
+    height: 320px;
   }
 }
 
@@ -706,14 +718,17 @@ a.forSaleLink:hover {
 
 .hero-image {
   display: none;
+  background-image: url(images/close-ups/sydney-awd-close-up.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.buy-art-grid .hero-image {
+  display: block;
 }
 @media (min-width: 1100px) {
   .hero-image {
     display: block;
-    background-image: url(images/close-ups/sydney-awd-close-up.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 }
 

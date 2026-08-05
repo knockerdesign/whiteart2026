@@ -84,22 +84,27 @@
             width: 300px
         }
     }
-    
-    &---illust { // fixes for a very long heading
+
+    &---illust {
+
+        // fixes for a very long heading
         .darrell-logo {
             @media (min-width: var.$bp-tablet) and (max-width: var.$bp-desktop) {
 
-            width: 280px;
+                width: 280px;
             }
         }
+
         .hero-heading {
             @media (min-width: 0) and (max-width: var.$bp-sm) {
                 letter-spacing: 0.15rem;
             }
+
             @media (min-width: var.$bp-tablet) and (max-width: var.$bp-desktop) {
                 letter-spacing: 0.2rem;
                 font-size: 4.9rem;
             }
+
             @media (min-width: var.$bp-desktop) and (max-width: var.$bp-xl) {
                 letter-spacing: 0.32rem;
             }
@@ -112,13 +117,17 @@
 
 .hero-image {
     display: none;
+    background-image: url(images/close-ups/sydney-awd-close-up.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .buy-art-grid & {
+        display: block;
+    }
 
     @media (min-width: var.$index-hero-shift) {
         display: block;
-        background-image: url(images/close-ups/sydney-awd-close-up.jpg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 }
 
@@ -138,6 +147,7 @@
 .hero-image--illust {
     background-image: url(images/galleries/gallery-imgs-illust-hover.jpg);
 }
+
 .hero-image--buy-art {
     background-image: url(images/galleries/buy-art-hero.jpg);
 }
@@ -176,4 +186,3 @@
         }
     }
 }
-
