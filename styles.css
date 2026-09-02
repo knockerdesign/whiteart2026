@@ -689,9 +689,20 @@ a.forSaleLink:hover {
   .hero--gallery {
     padding-left: 48px;
     flex-direction: column;
+    justify-content: flex-start;
   }
   .hero--gallery img {
     width: 300px;
+  }
+}
+@media (min-width: 1400px) {
+  .hero--gallery {
+    min-height: 350px;
+  }
+}
+@media (min-width: 2000px) {
+  .hero--gallery {
+    min-height: 550px;
   }
 }
 @media (min-width: 780px) and (max-width: 1100px) {

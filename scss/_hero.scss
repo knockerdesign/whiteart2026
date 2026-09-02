@@ -69,7 +69,6 @@
     @media (min-width: var.$bp-tablet) {
         flex-direction: row-reverse;
         justify-content: space-between;
-
         img {
             display: block;
             width: 340px
@@ -79,10 +78,19 @@
     @media (min-width: var.$index-hero-shift) {
         padding-left: var.$page-pad-md;
         flex-direction: column;
+        justify-content: flex-start;
 
         img {
             width: 300px
         }
+    }
+
+    @media (min-width: var.$bp-xl) {
+        min-height: 350px;
+    }
+
+    @media (min-width: var.$bp-xxl) {
+        min-height: 550px
     }
 
     &---illust {
