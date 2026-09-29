@@ -482,9 +482,8 @@ a.forSaleLink:hover {
   background: #00730c;
 }
 
-.btn-facebook {
+.btn-social {
   color: #fff;
-  background-color: #1877f2;
   font-size: 1.5rem;
   line-height: 1;
   display: flex;
@@ -493,12 +492,21 @@ a.forSaleLink:hover {
   width: 54px;
   height: 100%;
 }
-.btn-facebook:hover {
-  background-color: #034cac;
-}
-.btn-facebook svg {
+.btn-social svg {
   width: 34px;
   fill: #fff;
+}
+.btn-social--facebook {
+  background-color: #1877f2;
+}
+.btn-social--facebook:hover {
+  background-color: #034cac;
+}
+.btn-social--instagram {
+  background-color: #0095f6;
+}
+.btn-social--instagram:hover {
+  background-color: #18a2f8;
 }
 
 .nav-my-name {
