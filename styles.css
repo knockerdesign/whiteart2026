@@ -248,6 +248,12 @@ h2.standardHeading {
   }
 }
 
+sub,
+sup {
+  font-size: clamp(0.7493rem, 0.7215rem + 0.1385vw, 0.8325rem);
+  line-height: 0;
+}
+
 a {
   color: #1b67a9;
   text-decoration-color: #5da4e1;
@@ -302,6 +308,10 @@ span.sold {
 
 .align-center {
   text-align: center;
+}
+
+.my-ul li {
+  margin-bottom: 16px;
 }
 
 a.forSaleLink {

@@ -105,6 +105,11 @@ h2.standardHeading {
     }
 }
 
+sub,
+sup {
+    font-size: var.$sup-size-body;
+    line-height: 0;
+}
 
 a {
     color: var.$link;
@@ -163,4 +168,10 @@ span.sold {
 
 .align-center {
     text-align: center;
+}
+
+.my-ul {
+    li {
+        margin-bottom: var.$unit-rg;
+    }
 }
